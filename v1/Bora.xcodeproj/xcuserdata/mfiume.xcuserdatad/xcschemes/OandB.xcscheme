@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E94FE6317EEA1F80082BE7F"
-               BuildableName = "OandB.app"
-               BlueprintName = "OandB"
-               ReferencedContainer = "container:OandB.xcodeproj">
+               BuildableName = "Bora.app"
+               BlueprintName = "Bora"
+               ReferencedContainer = "container:Bora.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "4E94FE8717EEA1F80082BE7F"
-               BuildableName = "OandBTests.xctest"
-               BlueprintName = "OandBTests"
-               ReferencedContainer = "container:OandB.xcodeproj">
+               BuildableName = "BoraTests.xctest"
+               BlueprintName = "BoraTests"
+               ReferencedContainer = "container:Bora.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E94FE6317EEA1F80082BE7F"
-            BuildableName = "OandB.app"
-            BlueprintName = "OandB"
-            ReferencedContainer = "container:OandB.xcodeproj">
+            BuildableName = "Bora.app"
+            BlueprintName = "Bora"
+            ReferencedContainer = "container:Bora.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -62,9 +62,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E94FE6317EEA1F80082BE7F"
-            BuildableName = "OandB.app"
-            BlueprintName = "OandB"
-            ReferencedContainer = "container:OandB.xcodeproj">
+            BuildableName = "Bora.app"
+            BlueprintName = "Bora"
+            ReferencedContainer = "container:Bora.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -80,9 +80,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "4E94FE6317EEA1F80082BE7F"
-            BuildableName = "OandB.app"
-            BlueprintName = "OandB"
-            ReferencedContainer = "container:OandB.xcodeproj">
+            BuildableName = "Bora.app"
+            BlueprintName = "Bora"
+            ReferencedContainer = "container:Bora.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

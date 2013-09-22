@@ -63,6 +63,17 @@
 		4E94FF3B17EEA2BD0082BE7F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FF3A17EEA2BD0082BE7F /* QuartzCore.framework */; };
 		4E94FF3D17EEB95F0082BE7F /* ob-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E94FF3C17EEB95F0082BE7F /* ob-logo.png */; };
 		4EB9AC8E17EEBE050013B382 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94FF4017EEBB420082BE7F /* CardViewController.m */; };
+		4EDA5BE017EF3AFD007A1777 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BDA17EF3AFD007A1777 /* libzbar.a */; };
+		4EDA5BE117EF3AFD007A1777 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA5BDC17EF3AFD007A1777 /* zbar-back.png */; };
+		4EDA5BE217EF3AFD007A1777 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA5BDD17EF3AFD007A1777 /* zbar-help.html */; };
+		4EDA5BE317EF3AFD007A1777 /* zbar-helpicons.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA5BDE17EF3AFD007A1777 /* zbar-helpicons.png */; };
+		4EDA5BE417EF3AFD007A1777 /* zbar-samples.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA5BDF17EF3AFD007A1777 /* zbar-samples.png */; };
+		4EDA5BE617EF3B3A007A1777 /* libiconv.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BE517EF3B3A007A1777 /* libiconv.dylib */; };
+		4EDA5BE817EF3B47007A1777 /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BE717EF3B47007A1777 /* CoreMedia.framework */; };
+		4EDA5BEA17EF3B4E007A1777 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BE917EF3B4E007A1777 /* CoreVideo.framework */; };
+		4EDA5BEC17EF3B56007A1777 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BEB17EF3B56007A1777 /* CoreAudio.framework */; };
+		4EDA5BEE17EF3B60007A1777 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BED17EF3B60007A1777 /* AVFoundation.framework */; };
+		4EDA5BF117EF3D09007A1777 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA5BF017EF3CA6007A1777 /* ScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,14 +87,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E94FE6417EEA1F80082BE7F /* OandB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OandB.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E94FE6417EEA1F80082BE7F /* Bora.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bora.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E94FE6717EEA1F80082BE7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E94FE6917EEA1F80082BE7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		4E94FE6B17EEA1F80082BE7F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		4E94FE6F17EEA1F80082BE7F /* OandB-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OandB-Info.plist"; sourceTree = "<group>"; };
+		4E94FE6F17EEA1F80082BE7F /* Bora-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Bora-Info.plist"; sourceTree = "<group>"; };
 		4E94FE7117EEA1F80082BE7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E94FE7317EEA1F80082BE7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		4E94FE7517EEA1F80082BE7F /* OandB-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OandB-Prefix.pch"; sourceTree = "<group>"; };
+		4E94FE7517EEA1F80082BE7F /* Bora-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bora-Prefix.pch"; sourceTree = "<group>"; };
 		4E94FE7617EEA1F80082BE7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E94FE7717EEA1F80082BE7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E94FE7A17EEA1F80082BE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -92,9 +103,9 @@
 		4E94FE7F17EEA1F80082BE7F /* PayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
 		4E94FE8017EEA1F80082BE7F /* PayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		4E94FE8217EEA1F80082BE7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		4E94FE8817EEA1F80082BE7F /* OandBTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OandBTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E94FE8817EEA1F80082BE7F /* BoraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E94FE8917EEA1F80082BE7F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		4E94FE9117EEA1F80082BE7F /* OandBTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OandBTests-Info.plist"; sourceTree = "<group>"; };
+		4E94FE9117EEA1F80082BE7F /* BoraTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "BoraTests-Info.plist"; sourceTree = "<group>"; };
 		4E94FE9317EEA1F80082BE7F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E94FE9517EEA1F80082BE7F /* OandBTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OandBTests.m; sourceTree = "<group>"; };
 		4E94FEA017EEA2040082BE7F /* STPCard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STPCard.h; sourceTree = "<group>"; };
@@ -154,6 +165,38 @@
 		4E94FF3C17EEB95F0082BE7F /* ob-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ob-logo.png"; sourceTree = "<group>"; };
 		4E94FF3F17EEBB420082BE7F /* CardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
 		4E94FF4017EEBB420082BE7F /* CardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
+		4EDA5BC617EF3AFD007A1777 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
+		4EDA5BC717EF3AFD007A1777 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
+		4EDA5BC817EF3AFD007A1777 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		4EDA5BC917EF3AFD007A1777 /* ImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScanner.h; sourceTree = "<group>"; };
+		4EDA5BCA17EF3AFD007A1777 /* Processor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Processor.h; sourceTree = "<group>"; };
+		4EDA5BCB17EF3AFD007A1777 /* Scanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Scanner.h; sourceTree = "<group>"; };
+		4EDA5BCC17EF3AFD007A1777 /* Symbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Symbol.h; sourceTree = "<group>"; };
+		4EDA5BCD17EF3AFD007A1777 /* Video.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Video.h; sourceTree = "<group>"; };
+		4EDA5BCE17EF3AFD007A1777 /* Window.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Window.h; sourceTree = "<group>"; };
+		4EDA5BCF17EF3AFD007A1777 /* zbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zbar.h; sourceTree = "<group>"; };
+		4EDA5BD017EF3AFD007A1777 /* ZBarCameraSimulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCameraSimulator.h; sourceTree = "<group>"; };
+		4EDA5BD117EF3AFD007A1777 /* ZBarCaptureReader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarCaptureReader.h; sourceTree = "<group>"; };
+		4EDA5BD217EF3AFD007A1777 /* ZBarHelpController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarHelpController.h; sourceTree = "<group>"; };
+		4EDA5BD317EF3AFD007A1777 /* ZBarImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImage.h; sourceTree = "<group>"; };
+		4EDA5BD417EF3AFD007A1777 /* ZBarImageScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarImageScanner.h; sourceTree = "<group>"; };
+		4EDA5BD517EF3AFD007A1777 /* ZBarReaderController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderController.h; sourceTree = "<group>"; };
+		4EDA5BD617EF3AFD007A1777 /* ZBarReaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderView.h; sourceTree = "<group>"; };
+		4EDA5BD717EF3AFD007A1777 /* ZBarReaderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarReaderViewController.h; sourceTree = "<group>"; };
+		4EDA5BD817EF3AFD007A1777 /* ZBarSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSDK.h; sourceTree = "<group>"; };
+		4EDA5BD917EF3AFD007A1777 /* ZBarSymbol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZBarSymbol.h; sourceTree = "<group>"; };
+		4EDA5BDA17EF3AFD007A1777 /* libzbar.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libzbar.a; sourceTree = "<group>"; };
+		4EDA5BDC17EF3AFD007A1777 /* zbar-back.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-back.png"; sourceTree = "<group>"; };
+		4EDA5BDD17EF3AFD007A1777 /* zbar-help.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "zbar-help.html"; sourceTree = "<group>"; };
+		4EDA5BDE17EF3AFD007A1777 /* zbar-helpicons.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-helpicons.png"; sourceTree = "<group>"; };
+		4EDA5BDF17EF3AFD007A1777 /* zbar-samples.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "zbar-samples.png"; sourceTree = "<group>"; };
+		4EDA5BE517EF3B3A007A1777 /* libiconv.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libiconv.dylib; path = usr/lib/libiconv.dylib; sourceTree = SDKROOT; };
+		4EDA5BE717EF3B47007A1777 /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
+		4EDA5BE917EF3B4E007A1777 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		4EDA5BEB17EF3B56007A1777 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		4EDA5BED17EF3B60007A1777 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		4EDA5BEF17EF3CA6007A1777 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		4EDA5BF017EF3CA6007A1777 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,10 +204,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDA5BE617EF3B3A007A1777 /* libiconv.dylib in Frameworks */,
+				4EDA5BE817EF3B47007A1777 /* CoreMedia.framework in Frameworks */,
+				4EDA5BEA17EF3B4E007A1777 /* CoreVideo.framework in Frameworks */,
 				4E94FF3B17EEA2BD0082BE7F /* QuartzCore.framework in Frameworks */,
-				4E94FE6A17EEA1F80082BE7F /* CoreGraphics.framework in Frameworks */,
+				4EDA5BEC17EF3B56007A1777 /* CoreAudio.framework in Frameworks */,
+				4EDA5BEE17EF3B60007A1777 /* AVFoundation.framework in Frameworks */,
 				4E94FE6C17EEA1F80082BE7F /* UIKit.framework in Frameworks */,
 				4E94FE6817EEA1F80082BE7F /* Foundation.framework in Frameworks */,
+				4E94FE6A17EEA1F80082BE7F /* CoreGraphics.framework in Frameworks */,
+				4EDA5BE017EF3AFD007A1777 /* libzbar.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,8 +243,8 @@
 		4E94FE6517EEA1F80082BE7F /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				4E94FE6417EEA1F80082BE7F /* OandB.app */,
-				4E94FE8817EEA1F80082BE7F /* OandBTests.xctest */,
+				4E94FE6417EEA1F80082BE7F /* Bora.app */,
+				4E94FE8817EEA1F80082BE7F /* BoraTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -203,6 +252,11 @@
 		4E94FE6617EEA1F80082BE7F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				4EDA5BED17EF3B60007A1777 /* AVFoundation.framework */,
+				4EDA5BEB17EF3B56007A1777 /* CoreAudio.framework */,
+				4EDA5BE917EF3B4E007A1777 /* CoreVideo.framework */,
+				4EDA5BE717EF3B47007A1777 /* CoreMedia.framework */,
+				4EDA5BE517EF3B3A007A1777 /* libiconv.dylib */,
 				4E94FF3A17EEA2BD0082BE7F /* QuartzCore.framework */,
 				4E94FE6717EEA1F80082BE7F /* Foundation.framework */,
 				4E94FE6917EEA1F80082BE7F /* CoreGraphics.framework */,
@@ -215,11 +269,14 @@
 		4E94FE6D17EEA1F80082BE7F /* OandB */ = {
 			isa = PBXGroup;
 			children = (
+				4EDA5BC217EF3AFD007A1777 /* ZBarSDK */,
 				4E94FF3E17EEB9680082BE7F /* img */,
 				4E94FE9F17EEA2040082BE7F /* Stripe */,
 				4E94FE7617EEA1F80082BE7F /* AppDelegate.h */,
 				4E94FE7717EEA1F80082BE7F /* AppDelegate.m */,
 				4E94FE7917EEA1F80082BE7F /* Main.storyboard */,
+				4EDA5BEF17EF3CA6007A1777 /* ScanViewController.h */,
+				4EDA5BF017EF3CA6007A1777 /* ScanViewController.m */,
 				4E94FE7C17EEA1F80082BE7F /* FirstViewController.h */,
 				4E94FE7D17EEA1F80082BE7F /* FirstViewController.m */,
 				4E94FE7F17EEA1F80082BE7F /* PayViewController.h */,
@@ -235,10 +292,10 @@
 		4E94FE6E17EEA1F80082BE7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4E94FE6F17EEA1F80082BE7F /* OandB-Info.plist */,
+				4E94FE6F17EEA1F80082BE7F /* Bora-Info.plist */,
 				4E94FE7017EEA1F80082BE7F /* InfoPlist.strings */,
 				4E94FE7317EEA1F80082BE7F /* main.m */,
-				4E94FE7517EEA1F80082BE7F /* OandB-Prefix.pch */,
+				4E94FE7517EEA1F80082BE7F /* Bora-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -255,7 +312,7 @@
 		4E94FE9017EEA1F80082BE7F /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				4E94FE9117EEA1F80082BE7F /* OandBTests-Info.plist */,
+				4E94FE9117EEA1F80082BE7F /* BoraTests-Info.plist */,
 				4E94FE9217EEA1F80082BE7F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -369,12 +426,76 @@
 			name = img;
 			sourceTree = "<group>";
 		};
+		4EDA5BC217EF3AFD007A1777 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA5BC317EF3AFD007A1777 /* Headers */,
+				4EDA5BDA17EF3AFD007A1777 /* libzbar.a */,
+				4EDA5BDB17EF3AFD007A1777 /* Resources */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		4EDA5BC317EF3AFD007A1777 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA5BC417EF3AFD007A1777 /* ZBarSDK */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		4EDA5BC417EF3AFD007A1777 /* ZBarSDK */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA5BC517EF3AFD007A1777 /* zbar */,
+				4EDA5BCF17EF3AFD007A1777 /* zbar.h */,
+				4EDA5BD017EF3AFD007A1777 /* ZBarCameraSimulator.h */,
+				4EDA5BD117EF3AFD007A1777 /* ZBarCaptureReader.h */,
+				4EDA5BD217EF3AFD007A1777 /* ZBarHelpController.h */,
+				4EDA5BD317EF3AFD007A1777 /* ZBarImage.h */,
+				4EDA5BD417EF3AFD007A1777 /* ZBarImageScanner.h */,
+				4EDA5BD517EF3AFD007A1777 /* ZBarReaderController.h */,
+				4EDA5BD617EF3AFD007A1777 /* ZBarReaderView.h */,
+				4EDA5BD717EF3AFD007A1777 /* ZBarReaderViewController.h */,
+				4EDA5BD817EF3AFD007A1777 /* ZBarSDK.h */,
+				4EDA5BD917EF3AFD007A1777 /* ZBarSymbol.h */,
+			);
+			path = ZBarSDK;
+			sourceTree = "<group>";
+		};
+		4EDA5BC517EF3AFD007A1777 /* zbar */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA5BC617EF3AFD007A1777 /* Decoder.h */,
+				4EDA5BC717EF3AFD007A1777 /* Exception.h */,
+				4EDA5BC817EF3AFD007A1777 /* Image.h */,
+				4EDA5BC917EF3AFD007A1777 /* ImageScanner.h */,
+				4EDA5BCA17EF3AFD007A1777 /* Processor.h */,
+				4EDA5BCB17EF3AFD007A1777 /* Scanner.h */,
+				4EDA5BCC17EF3AFD007A1777 /* Symbol.h */,
+				4EDA5BCD17EF3AFD007A1777 /* Video.h */,
+				4EDA5BCE17EF3AFD007A1777 /* Window.h */,
+			);
+			path = zbar;
+			sourceTree = "<group>";
+		};
+		4EDA5BDB17EF3AFD007A1777 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4EDA5BDC17EF3AFD007A1777 /* zbar-back.png */,
+				4EDA5BDD17EF3AFD007A1777 /* zbar-help.html */,
+				4EDA5BDE17EF3AFD007A1777 /* zbar-helpicons.png */,
+				4EDA5BDF17EF3AFD007A1777 /* zbar-samples.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4E94FE6317EEA1F80082BE7F /* OandB */ = {
+		4E94FE6317EEA1F80082BE7F /* Bora */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E94FE9917EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "OandB" */;
+			buildConfigurationList = 4E94FE9917EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "Bora" */;
 			buildPhases = (
 				4E94FE6017EEA1F80082BE7F /* Sources */,
 				4E94FE6117EEA1F80082BE7F /* Frameworks */,
@@ -384,14 +505,14 @@
 			);
 			dependencies = (
 			);
-			name = OandB;
+			name = Bora;
 			productName = OandB;
-			productReference = 4E94FE6417EEA1F80082BE7F /* OandB.app */;
+			productReference = 4E94FE6417EEA1F80082BE7F /* Bora.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4E94FE8717EEA1F80082BE7F /* OandBTests */ = {
+		4E94FE8717EEA1F80082BE7F /* BoraTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4E94FE9C17EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "OandBTests" */;
+			buildConfigurationList = 4E94FE9C17EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "BoraTests" */;
 			buildPhases = (
 				4E94FE8417EEA1F80082BE7F /* Sources */,
 				4E94FE8517EEA1F80082BE7F /* Frameworks */,
@@ -402,9 +523,9 @@
 			dependencies = (
 				4E94FE8E17EEA1F80082BE7F /* PBXTargetDependency */,
 			);
-			name = OandBTests;
+			name = BoraTests;
 			productName = OandBTests;
-			productReference = 4E94FE8817EEA1F80082BE7F /* OandBTests.xctest */;
+			productReference = 4E94FE8817EEA1F80082BE7F /* BoraTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -421,7 +542,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 4E94FE5F17EEA1F80082BE7F /* Build configuration list for PBXProject "OandB" */;
+			buildConfigurationList = 4E94FE5F17EEA1F80082BE7F /* Build configuration list for PBXProject "Bora" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -434,8 +555,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4E94FE6317EEA1F80082BE7F /* OandB */,
-				4E94FE8717EEA1F80082BE7F /* OandBTests */,
+				4E94FE6317EEA1F80082BE7F /* Bora */,
+				4E94FE8717EEA1F80082BE7F /* BoraTests */,
 			);
 		};
 /* End PBXProject section */
@@ -445,11 +566,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDA5BE217EF3AFD007A1777 /* zbar-help.html in Resources */,
 				4E94FF1C17EEA2040082BE7F /* visa.png in Resources */,
 				4E94FF1017EEA2040082BE7F /* cvc.png in Resources */,
 				4E94FF3D17EEB95F0082BE7F /* ob-logo.png in Resources */,
 				4E94FF1E17EEA2040082BE7F /* gradient@2x.png in Resources */,
 				4E94FF0217EEA2040082BE7F /* .gitignore in Resources */,
+				4EDA5BE317EF3AFD007A1777 /* zbar-helpicons.png in Resources */,
 				4E94FF1417EEA2040082BE7F /* discover.png in Resources */,
 				4E94FF1217EEA2040082BE7F /* diners.png in Resources */,
 				4E94FF3217EEA2040082BE7F /* PaymentKit.podspec in Resources */,
@@ -457,6 +580,7 @@
 				4E94FF0D17EEA2040082BE7F /* amex@2x.png in Resources */,
 				4E94FE8317EEA1F80082BE7F /* Images.xcassets in Resources */,
 				4E94FF0E17EEA2040082BE7F /* cvc-amex.png in Resources */,
+				4EDA5BE417EF3AFD007A1777 /* zbar-samples.png in Resources */,
 				4E94FF1F17EEA2040082BE7F /* textfield.png in Resources */,
 				4E94FF1B17EEA2040082BE7F /* placeholder@2x.png in Resources */,
 				4E94FF0C17EEA2040082BE7F /* amex.png in Resources */,
@@ -464,6 +588,7 @@
 				4E94FF2017EEA2040082BE7F /* textfield@2x.png in Resources */,
 				4E94FF1117EEA2040082BE7F /* cvc@2x.png in Resources */,
 				4E94FF0F17EEA2040082BE7F /* cvc-amex@2x.png in Resources */,
+				4EDA5BE117EF3AFD007A1777 /* zbar-back.png in Resources */,
 				4E94FF1717EEA2040082BE7F /* jcb@2x.png in Resources */,
 				4E94FF1A17EEA2040082BE7F /* placeholder.png in Resources */,
 				4E94FF1D17EEA2040082BE7F /* visa@2x.png in Resources */,
@@ -492,6 +617,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4EDA5BF117EF3D09007A1777 /* ScanViewController.m in Sources */,
 				4EB9AC8E17EEBE050013B382 /* CardViewController.m in Sources */,
 				4E94FF0517EEA2040082BE7F /* PKCard.m in Sources */,
 				4E94FF0B17EEA2040082BE7F /* PKView.m in Sources */,
@@ -526,7 +652,7 @@
 /* Begin PBXTargetDependency section */
 		4E94FE8E17EEA1F80082BE7F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4E94FE6317EEA1F80082BE7F /* OandB */;
+			target = 4E94FE6317EEA1F80082BE7F /* Bora */;
 			targetProxy = 4E94FE8D17EEA1F80082BE7F /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -633,9 +759,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OandB/OandB-Prefix.pch";
-				INFOPLIST_FILE = "OandB/OandB-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "OandB/Bora-Prefix.pch";
+				INFOPLIST_FILE = "OandB/Bora-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/OandB/ZBarSDK",
+				);
+				PRODUCT_NAME = Bora;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -646,9 +776,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "OandB/OandB-Prefix.pch";
-				INFOPLIST_FILE = "OandB/OandB-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "OandB/Bora-Prefix.pch";
+				INFOPLIST_FILE = "OandB/Bora-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/OandB/ZBarSDK",
+				);
+				PRODUCT_NAME = Bora;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -668,8 +802,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "OandBTests/OandBTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "OandBTests/BoraTests-Info.plist";
+				PRODUCT_NAME = BoraTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -686,8 +820,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OandB/OandB-Prefix.pch";
-				INFOPLIST_FILE = "OandBTests/OandBTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "OandBTests/BoraTests-Info.plist";
+				PRODUCT_NAME = BoraTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -696,7 +830,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4E94FE5F17EEA1F80082BE7F /* Build configuration list for PBXProject "OandB" */ = {
+		4E94FE5F17EEA1F80082BE7F /* Build configuration list for PBXProject "Bora" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E94FE9717EEA1F80082BE7F /* Debug */,
@@ -705,7 +839,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E94FE9917EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "OandB" */ = {
+		4E94FE9917EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "Bora" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E94FE9A17EEA1F80082BE7F /* Debug */,
@@ -714,7 +848,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4E94FE9C17EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "OandBTests" */ = {
+		4E94FE9C17EEA1F80082BE7F /* Build configuration list for PBXNativeTarget "BoraTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4E94FE9D17EEA1F80082BE7F /* Debug */,
