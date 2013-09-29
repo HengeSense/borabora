@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>47140955-CD6E-437D-9646-14E278826716</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Bora-Merchant</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>12115B64-0BC0-48A6-9EFD-3CC9CF18F438</key>
+		<string>https://github.com/mfiume/borabora.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Bora-Merchant/Bora-Merchant.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>12115B64-0BC0-48A6-9EFD-3CC9CF18F438</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mfiume/borabora.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>12115B64-0BC0-48A6-9EFD-3CC9CF18F438</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>12115B64-0BC0-48A6-9EFD-3CC9CF18F438</string>
+			<key>IDESourceControlWCCName</key>
+			<string>borabora</string>
+		</dict>
+	</array>
+</dict>
+</plist>

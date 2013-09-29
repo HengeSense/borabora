@@ -14,6 +14,8 @@
 
 @implementation ScanViewController
 
+@synthesize labelAmount;
+
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
@@ -28,6 +30,14 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
+
+/*
+- (UIStatusBarStyle)preferredStatusBarStyle
+{
+    NSLog(@"Preferring");
+    return UIStatusBarStyleLightContent;
+}
+ */
 
 - (void)didReceiveMemoryWarning
 {
@@ -60,6 +70,8 @@
     
     // showing the result on textview
     NSLog(@"%@",symbol.data);
+    
+    [labelAmount setText:symbol.data];
     
     //resultImageView.image = [info objectForKey: UIImagePickerControllerOriginalImage];
     

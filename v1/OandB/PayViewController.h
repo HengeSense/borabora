@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PrimaryViewController.h"
 
-@interface PayViewController : UIViewController
+@interface PayViewController : PrimaryViewController
 
 @end

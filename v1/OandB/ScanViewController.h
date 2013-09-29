@@ -10,6 +10,7 @@
 #import "ZBarSDK.h"
 
 @interface ScanViewController : UIViewController<ZBarReaderDelegate>
+@property (strong, nonatomic) IBOutlet UILabel *labelAmount;
 
 - (IBAction)startScanning:(id)sender;
 

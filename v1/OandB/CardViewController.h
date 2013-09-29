@@ -15,8 +15,6 @@
 @property (strong, nonatomic) IBOutlet UIButton *payButton;
 - (IBAction)payButtonPressed:(id)sender;
 
-
-- (IBAction)saveButtonPressed:(id)sender;
 @property (strong, nonatomic) IBOutlet UIView *viewCreditCardContainer;
 
 @end

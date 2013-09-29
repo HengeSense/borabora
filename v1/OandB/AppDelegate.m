@@ -7,15 +7,60 @@
 //
 
 #import "AppDelegate.h"
+#import "Colors.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UINavigationBar appearance] setBackgroundColor:[UIColor redColor]];
+    [[UINavigationBar appearance] setBarTintColor:[Colors getPrimaryBackgroundColor]];
+    
+//    rgb(155, 89, 182)
+    
+    //[[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor whiteColor],
+      NSForegroundColorAttributeName,
+      nil]];
+    
+    
+    UIFont* defaultLabelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
+    UIFont* defaultButtonFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
+    
+    [[UILabel appearance] setFont:defaultLabelFont];
+    
+    //[[UIButton appearance] setFont:defaultButtonFont];
+    //[[UIButton appearance] setTitleColor:[Colors getPrimaryBackgroundColor] forState:UIControlStateNormal];
+    
+    [[UIBarButtonItem appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[UIFont boldSystemFontOfSize:16], NSFontAttributeName,nil] forState:UIControlStateNormal];
+    
+    [[UINavigationBar appearance] setTintColor:[Colors getPrimaryForegroundColor]];
+    
+    [[UIToolbar appearance] setBackgroundColor:[Colors getPrimaryBackgroundColor]];
+    [[UIToolbar appearance] setTintColor:[Colors getToolbarButtonColor]];
+    
+    [[UITabBar appearance] setBackgroundImage:[self imageWithColor:[Colors getPrimaryBackgroundColor] Width:320 Height:49]];
+    [[UITabBar appearance] setTintColor:[Colors getPrimaryForegroundColor]];
+    [[UITabBar appearance] setSelectedImageTintColor:[Colors getPrimaryForegroundColor]];
     
     // Override point for customization after application launch.
     return YES;
+}
+
+- (UIImage *)imageWithColor:(UIColor *)color Width:(int)width Height:(int)height {
+    CGRect rect = CGRectMake(0.0f, 0.0f, width, height);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, rect);
+    
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return image;
 }
 							
 - (void)applicationWillResignActive:(UIApplication *)application
