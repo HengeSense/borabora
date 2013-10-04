@@ -8,6 +8,10 @@
 
 #import "AddCardViewController.h"
 #import "CardController.h"
+#import "PaymentController.h"
+#import "AccountAdapter.h"
+#import "NetUtils.h"
+#import "SessionController.h"
 
 @interface AddCardViewController ()
 
@@ -31,8 +35,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.stripeView = [[STPView alloc] initWithFrame:CGRectMake(15,0,290,55)
-                                              andKey:@"pk_test_sTO7YONO6FZ0ZnrW4SlcXh0S"];
+    self.stripeView = [PaymentController getStripeView];
     self.stripeView.delegate = self;
     [self.viewCreditCardContainer addSubview:self.stripeView];
 
@@ -41,34 +44,51 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {
-    [self.navigationController popViewControllerAnimated:YES];
-//    [self dismissViewControllerAnimated:YES completion:nil];
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-static PKCard* lastValidCard;
+static STPToken* lastValidToken;
 
 - (void)stripeView:(STPView *)view withCard:(PKCard *)card isValid:(BOOL)valid
 {
+
     // Toggle navigation, for example
     [buttonAddCard setEnabled:valid];
-    
+
     if (valid) {
-        lastValidCard = card;
+        [view createToken:^(STPToken *token, NSError *error) {
+            if (error) {
+                // Handle error
+                lastValidToken = nil;
+            } else {
+                // Send off token to your server
+                lastValidToken = token;
+            }
+        }];
     } else {
-        lastValidCard = nil;
+        lastValidToken = nil;
     }
 }
 
-- (IBAction)addButtonPressed:(id)sender {
-    if (lastValidCard != nil) {
-        [[CardController getInstance] addCard:lastValidCard];
-        [self.navigationController popViewControllerAnimated:YES];
-    }
+-(void) addCardByToken:(STPToken*) token {
+    [AccountAdapter createCardForSession:[[SessionController getInstance] getSession] WithToken:token Handler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        // session successful
+        if ([NetUtils wasRequestSuccessful:response]) {
+            [NetUtils printJSONDictionaryFromData:data];
+            [self dismissViewControllerAnimated:YES completion:nil];
+        } else {
+            NSLog(@"Error");
+        }
+    }];
+}
 
+- (IBAction)addButtonPressed:(id)sender {
+    if (lastValidToken != nil) {
+        [self addCardByToken:lastValidToken];
+    }
 }
 
 @end

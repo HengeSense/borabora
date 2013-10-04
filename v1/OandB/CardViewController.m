@@ -7,6 +7,8 @@
 //
 
 #import "CardViewController.h"
+#import "PaymentController.h"
+#import "NetUtils.h"
 
 @interface CardViewController ()
 
@@ -29,8 +31,7 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     
-    self.stripeView = [[STPView alloc] initWithFrame:CGRectMake(15,0,290,55)
-                                              andKey:@"pk_test_sTO7YONO6FZ0ZnrW4SlcXh0S"];
+    self.stripeView = [PaymentController getStripeView];
     self.stripeView.delegate = self;
     [self.viewCreditCardContainer addSubview:self.stripeView];
 }
@@ -73,11 +74,8 @@
 {
     NSLog(@"Received token %@", token.tokenId);
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://healthcubed.ca/borabora/u/pay.php"]];
-    request.HTTPMethod = @"POST";
     NSString *body     = [NSString stringWithFormat:@"stripeToken=%@", token.tokenId];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    
+    NSMutableURLRequest *request = [NetUtils getPOSTRequest:body FromURL:[NetUtils getPayURL]];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {

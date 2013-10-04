@@ -10,7 +10,7 @@
 #import "Colors.h"
 #import "ViewUtil.h"
 #import "CardController.h"
-#import "PKCardNumber.h"
+#import "Card.h"
 #import "Checkout.h"
 #import "CardController.h"
 
@@ -39,17 +39,14 @@
     return self;
 }
 
--(void) viewDidAppear:(BOOL)animated {
-    [self initTable];
-}
 
 -(void) initTable {
-    
-    cardTableView = [[containerCards subviews] objectAtIndex:0];
-    NSLog(@"tableview %@",cardTableView);
-    cardTableView.delegate = self;
-    cardTableView.dataSource = self;
-    [self refreshTable];
+    if (cardTableView == nil) {
+        cardTableView = [[containerCards subviews] objectAtIndex:0];
+        NSLog(@"tableview %@",cardTableView);
+        cardTableView.delegate = self;
+        cardTableView.dataSource = self;
+    }
 }
 
 -(void) refreshTable {
@@ -71,12 +68,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    [ViewUtil roundView:containerCards];
     [ViewUtil addLineBorder:containerCards];
-
+    
     [containerCards setHidden:YES];
     [containerCards setTranslatesAutoresizingMaskIntoConstraints:YES];
     [buttonAddCard setTranslatesAutoresizingMaskIntoConstraints:YES];
+    [self initTable];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [self refreshTable];
 }
 
 - (void)didReceiveMemoryWarning
@@ -114,14 +115,15 @@ static int TAG_LAST_FOUR = 2;
         [cell.contentView setBackgroundColor:[Colors getTertiaryBackgroundColor]];
     }
     
-    PKCard* card = [[[CardController getInstance] getCards] objectAtIndex:indexPath.row];
+    Card* card = [[[CardController getInstance] getCards] objectAtIndex:indexPath.row];
     
     UIImageView* cardTypeView = (UIImageView*)[cell.contentView viewWithTag:TAG_CARD_TYPE];
-    [cardTypeView setImage:[ViewUtil getCardImageForCard:card]];
-    
+    [cardTypeView setImage:[ViewUtil getCardImageForCardType:[card getType]]];
+     
     UILabel* last4 = (UILabel*) [cell.contentView viewWithTag:TAG_LAST_FOUR];
-    [last4 setText:[NSString stringWithFormat:@"%@",card.last4]]; //could use •
+    [last4 setText:[NSString stringWithFormat:@"%@",[card getLastFour]]]; //could use •
     
+    [ViewUtil addDisclosureIndicatorToTableCell:cell];
     
     // Configure the cell...
     

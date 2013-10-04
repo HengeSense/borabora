@@ -7,16 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PKCard.h"
+#import "STPToken.h"
 
 @interface CardController : NSObject {
-    NSMutableArray* cards;
+    NSArray* cards;
 }
 
 +(CardController*) getInstance;
 
 -(NSArray*) getCards;
 -(int) getNumCards;
--(void) addCard:(PKCard*) card;
+
+-(void) refreshCardsForCurrentCustomer;
 
 @end

@@ -9,6 +9,7 @@
 #import "ConfirmViewController.h"
 #import "ViewUtil.h"
 #import "Checkout.h"
+#import "ProcessPaymentViewController.h"
 
 @implementation ConfirmViewController
 
@@ -36,10 +37,10 @@
     Checkout* checkout = [Checkout getCurrentCheckout];
     [labelTotalAmount setText:[ViewUtil convertFloatToMoneyString:[checkout getTotalCheckoutAmount]]];
     
-    UIImage* cardImage = [ViewUtil getCardImageForCard:[checkout getCard]];
+    UIImage* cardImage = [ViewUtil getCardImageForCardType:[[checkout getCard] getType]];
     [imageViewCard setImage:cardImage];
     
-    [labelLastFour setText:[checkout getCard].last4];
+    [labelLastFour setText:[[checkout getCard] getLastFour]];
 }
 
 - (void)didReceiveMemoryWarning
@@ -50,6 +51,13 @@
 
 
 - (IBAction)confirmButtonPressed:(id)sender {
+    
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    ProcessPaymentViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ProcessPaymentViewController"];
+    [self.navigationController pushViewController:vc animated:YES];
+
+    [vc completeCheckout:[Checkout getCurrentCheckout]];
+    
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {

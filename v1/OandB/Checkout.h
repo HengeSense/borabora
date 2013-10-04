@@ -8,23 +8,23 @@
 
 #import <Foundation/Foundation.h>
 #import "Bill.h"
-#import "PKCard.h"
+#import "Card.h"
 
 @interface Checkout : NSObject  {
     Bill* bill;
     float tipAmount;
-    PKCard* card;
+    Card* card;
 }
 
 -(id) initWithBill:(Bill*)bill;
 -(float) getBillAmount;
 -(float) getTipAmount;
 -(float) getTotalCheckoutAmount;
--(PKCard*) getCard;
+-(Card*) getCard;
 -(Bill*) getBill;
 
 -(void) setTipAmount:(float) amount;
--(void) setCard:(PKCard*) card;
+-(void) setCard:(Card*) card;
 
 +(void) startNewCheckout:(Bill*) bill;
 +(Checkout*) getCurrentCheckout;

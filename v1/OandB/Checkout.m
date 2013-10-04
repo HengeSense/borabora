@@ -24,11 +24,11 @@
 -(float) getBillAmount { return [bill getAmount]; }
 -(float) getTipAmount { return tipAmount; }
 -(float) getTotalCheckoutAmount { return tipAmount+[self getBillAmount]; }
--(PKCard*) getCard { return card; }
+-(Card*) getCard { return card; }
 -(Bill*) getBill { return bill; }
 
 -(void) setTipAmount:(float) amount { tipAmount = amount; }
--(void) setCard:(PKCard*) c { card = c; }
+-(void) setCard:(Card*) c { card = c; }
 
 static Checkout* currentCheckout;
 

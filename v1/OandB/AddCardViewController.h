@@ -19,5 +19,7 @@
 
 @property (strong, nonatomic) IBOutlet UIView *viewCreditCardContainer;
 
+- (IBAction)cancelButtonPressed:(id)sender;
+
 
 @end

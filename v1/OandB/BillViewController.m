@@ -33,19 +33,42 @@
 {
     [super viewDidLoad];
 
-    
     [ViewUtil addLineBorder:containerAmounts];
-    [ViewUtil roundView:containerAmounts];
     [ViewUtil roundView:viewLogo];
+    
+    [self initializeAmounts];
 }
 
--(void) viewDidAppear:(BOOL)animated {
-    UITableView* amountsTable = (UITableView*) [containerAmounts.subviews objectAtIndex:0];
-    labelBillOriginalAmount = [self getLabelFromTable:amountsTable Row:0];
-    labelTipAmount = [self getLabelFromTable:amountsTable Row:1];
-    labelBillGrandTotalAmount = [self getLabelFromTable:amountsTable Row:2];
+-(void) initializeAmounts {
+    NSLog(@"Initializing amounts");
+    
+    if (labelBillOriginalAmount == nil) {
+        UITableView* amountsTable = (UITableView*) [containerAmounts.subviews objectAtIndex:0];
+        [amountsTable reloadData]; // Very important! Otherwise the cells aren't initialized
+        labelBillOriginalAmount = [self getLabelFromTable:amountsTable Row:0];
+        labelTipAmount = [self getLabelFromTable:amountsTable Row:1];
+        labelBillGrandTotalAmount = [self getLabelFromTable:amountsTable Row:2];
+        
+        if (labelBillOriginalAmount == nil) {
+            NSLog(@"ERROR - Could not initialize amounts");
+        }
+    
+        [labelTipAmount setTextColor:[Colors getSecondaryButtonColor]];
+        labelTipAmount.userInteractionEnabled = YES;
+        UITapGestureRecognizer *tapGesture =
+        [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(labelTap)];
+        [labelTipAmount addGestureRecognizer:tapGesture];
+    }
     
     [self refreshForCurrentBill];
+}
+
+-(void) viewWillAppear:(BOOL)animated {
+    [self refreshForCurrentBill];
+}
+
+-(void) labelTap {
+    [self showSetTipSheet];
 }
 
 -(UILabel*) getLabelFromTable:(UITableView*) table Row:(int)row {
@@ -60,13 +83,6 @@
     
 }
 
--(void) printSubviews:(UIView*) v {
-    NSLog(@"Subviews of %@",[v class]);
-    for (UIView* s in [v subviews]) {
-        NSLog(@"\t%@",[s class]);
-    }
-}
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -74,28 +90,20 @@
 }
 
 - (IBAction)cancelButtonPressed:(id)sender {
-    NSLog(@"Cancelling payment workflow");
-    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)addTipButtonPressed:(id)sender {
-    /*
-    int pickerHeight = 200;
-    UIPickerView* picker = [[UIPickerView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height-pickerHeight+20, 320, pickerHeight)];
-    [picker setBackgroundColor:[Colors getSecondaryBackgroundColor]];
-    picker.delegate = self;
-    [self.view addSubview:picker];
-    */
+    
+    [self showSetTipSheet];
     
     
+}
+
+-(void) showSetTipSheet {
     [self createActionSheet];
     [actionSheet showInView:self.view];
     [actionSheet setBounds:CGRectMake(0,0,320,464)];
-    
-    
-    NSLog(@"Showing actionsheet");
-    //[actionSheet showInView:self.view];
 }
 
 
@@ -172,7 +180,6 @@
 }
 
 -(void) pickerDone:(id) sender {
-    NSLog(@"Picker done");
     [actionSheet dismissWithClickedButtonIndex:0 animated:YES];
 }
 
@@ -180,11 +187,8 @@
     Bill* bill = [[Checkout getCurrentCheckout] getBill];
     [labelBillOriginalAmount setText:[ViewUtil convertFloatToMoneyString:[bill getAmount]]];
     
-    if ([[Checkout getCurrentCheckout] getTipAmount] == 0) {
-        [labelTipAmount setText:@""];
-    } else {
-        [labelTipAmount setText:[ViewUtil convertFloatToMoneyString:[[Checkout getCurrentCheckout] getTipAmount]]];
-    }
+    [labelTipAmount setText:[ViewUtil convertFloatToMoneyString:[[Checkout getCurrentCheckout] getTipAmount]]];
+    
     [labelBillGrandTotalAmount setText:[ViewUtil convertFloatToMoneyString:[[Checkout getCurrentCheckout] getTotalCheckoutAmount]]];
 }
 
@@ -195,8 +199,6 @@
     int tip = tens*10 + ones;
     bool isPercent = [picker selectedRowInComponent:2] == 0;
     
-    NSLog(@"tip: %d,%d,%i",tens,ones,isPercent);
-    
     float newTipAmount;
     Bill* bill = [[Checkout getCurrentCheckout] getBill];
     
@@ -205,17 +207,13 @@
     } else {
         newTipAmount = tip;
     }
-    
-    NSLog(@"tipamount: %f",newTipAmount);
-    
+
     [[Checkout getCurrentCheckout] setTipAmount:newTipAmount];
     
     [self refreshForCurrentBill];
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    NSLog(@"picker changed");
-    
     [self setTipBasedOnPicker:pickerView];
 }
 

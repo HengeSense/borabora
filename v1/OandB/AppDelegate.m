@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "Colors.h"
+#import "ViewUtil.h"
 
 @implementation AppDelegate
 
@@ -26,8 +27,8 @@
       nil]];
     
     
-    UIFont* defaultLabelFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
-    UIFont* defaultButtonFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:22];
+    UIFont* defaultLabelFont = [UIFont fontWithName:[ViewUtil getDefaultFontFamily] size:22];
+    UIFont* defaultButtonFont = [UIFont fontWithName:[ViewUtil getDefaultFontFamily] size:22];
     
     [[UILabel appearance] setFont:defaultLabelFont];
     
@@ -44,6 +45,7 @@
     [[UITabBar appearance] setBackgroundImage:[self imageWithColor:[Colors getPrimaryBackgroundColor] Width:320 Height:49]];
     [[UITabBar appearance] setTintColor:[Colors getPrimaryForegroundColor]];
     [[UITabBar appearance] setSelectedImageTintColor:[Colors getPrimaryForegroundColor]];
+    
     
     // Override point for customization after application launch.
     return YES;

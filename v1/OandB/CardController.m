@@ -7,6 +7,10 @@
 //
 
 #import "CardController.h"
+#import "SessionController.h"
+#import "AccountAdapter.h"
+#import "NetUtils.h"
+#import "AccountAdapter.h"
 
 @implementation CardController
 
@@ -22,7 +26,6 @@ static CardController* instance;
 -(id) init {
     self = [super init];
     if (self) {
-        cards = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -35,8 +38,33 @@ static CardController* instance;
     return [cards count];
 }
 
--(void) addCard:(PKCard*) card {
-    [cards addObject:card];
+-(void) refreshCardsForCurrentCustomer {
+    
+    NSLog(@"a");
+    NSString* session = [[SessionController getInstance] getSession];
+    if (session == nil) { return; }
+    
+    NSLog(@"b");
+    cards = [AccountAdapter getCardsForSession:session];
+    
+    NSLog(@"c");
+    [AccountAdapter getUserForSession:session Handler:
+     ^(NSURLResponse *response, NSData *data, NSError *error) {
+         
+         // successful
+         if ([NetUtils wasRequestSuccessful:response]) {
+             
+             NSLog(@"f");
+             [NetUtils printJSONDictionaryFromData:data];
+             
+             // failed
+         } else {
+             NSLog(@"e");
+             int internalCode = [NetUtils getInternalErrorCodeFromData:data];
+             [NetUtils showErrorMessageFromCode:internalCode];
+         }
+         
+     }];
 }
 
 @end

@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E1B2D8217FA4851007F6FC5 /* ChooseAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B2D8117FA4814007F6FC5 /* ChooseAccountViewController.m */; };
+		4E1B2D8517FA562E007F6FC5 /* OneTimeAddCardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B2D8417FA561C007F6FC5 /* OneTimeAddCardViewController.m */; };
+		4E1B2D8817FA5719007F6FC5 /* PaymentController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B2D8717FA56BD007F6FC5 /* PaymentController.m */; };
+		4E1B2D8E17FA7E30007F6FC5 /* BorderedView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B2D8D17FA7E21007F6FC5 /* BorderedView.m */; };
+		4E1B2D9117FA7EEE007F6FC5 /* BorderedCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E1B2D9017FA7EB4007F6FC5 /* BorderedCell.m */; };
 		4E33331E17F6227B00588AB9 /* printer-feed-paper.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E33331D17F621CF00588AB9 /* printer-feed-paper.png */; };
 		4E33331F17F6227B00588AB9 /* printer-feed-hole.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E33331C17F620F200588AB9 /* printer-feed-hole.png */; };
 		4E33332417F707EA00588AB9 /* TertiaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33332317F7071C00588AB9 /* TertiaryViewController.m */; };
@@ -15,6 +20,13 @@
 		4E33333317F7735900588AB9 /* ViewUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33333217F7731C00588AB9 /* ViewUtil.m */; };
 		4E33333717F78AE800588AB9 /* PrimaryUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33333617F78AC800588AB9 /* PrimaryUIButton.m */; };
 		4E33333B17F7920C00588AB9 /* SecondaryUIButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E33333A17F7920C00588AB9 /* SecondaryUIButton.m */; };
+		4E59072917FD051F00E4260D /* AccountAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59072817FD051F00E4260D /* AccountAdapter.m */; };
+		4E59072C17FD056200E4260D /* ResponseAdapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59072B17FD056200E4260D /* ResponseAdapter.m */; };
+		4E59073317FD303B00E4260D /* CryptoUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59073217FD303B00E4260D /* CryptoUtils.m */; };
+		4E59073617FDB25000E4260D /* SessionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59073517FDB25000E4260D /* SessionController.m */; };
+		4E59073D17FDCB6200E4260D /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59073C17FDCB6200E4260D /* NSString+URLEncoding.m */; };
+		4E59074017FE5F2400E4260D /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59073F17FE5F2400E4260D /* Card.m */; };
+		4E65BFA017FA80A2006934D4 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E65BF9F17FA8089006934D4 /* CreateAccountViewController.m */; };
 		4E94FE6817EEA1F80082BE7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6717EEA1F80082BE7F /* Foundation.framework */; };
 		4E94FE6A17EEA1F80082BE7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6917EEA1F80082BE7F /* CoreGraphics.framework */; };
 		4E94FE6C17EEA1F80082BE7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6B17EEA1F80082BE7F /* UIKit.framework */; };
@@ -74,6 +86,7 @@
 		4EA9E30D17F877E50063B66C /* Checkout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E30C17F8773B0063B66C /* Checkout.m */; };
 		4EA9E31017F87E220063B66C /* ConfirmViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E30F17F87DD70063B66C /* ConfirmViewController.m */; };
 		4EA9E31317F883DC0063B66C /* RoundedTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E31217F883AB0063B66C /* RoundedTextView.m */; };
+		4EA9E31617F892EB0063B66C /* ProcessPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E31517F892DA0063B66C /* ProcessPaymentViewController.m */; };
 		4EACF2B417F7977D003601C1 /* CardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EACF2B317F79745003601C1 /* CardController.m */; };
 		4EACF2BC17F79A71003601C1 /* ChoosePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EACF2BB17F79A1E003601C1 /* ChoosePaymentViewController.m */; };
 		4EB9AC8E17EEBE050013B382 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94FF4017EEBB420082BE7F /* CardViewController.m */; };
@@ -90,6 +103,7 @@
 		4EC26B6817F5ECFA007BCF38 /* pay-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC26B6617F5ECFA007BCF38 /* pay-icon.png */; };
 		4EC26B6917F5ECFA007BCF38 /* pay-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC26B6717F5ECFA007BCF38 /* pay-icon@2x.png */; };
 		4EC26B6F17F6157A007BCF38 /* purple-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC26B6E17F6157A007BCF38 /* purple-2.png */; };
+		4EC4A38417FB64FF006A9B00 /* NetUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC4A38317FB64FF006A9B00 /* NetUtils.m */; };
 		4EDA5BE017EF3AFD007A1777 /* libzbar.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BDA17EF3AFD007A1777 /* libzbar.a */; };
 		4EDA5BE117EF3AFD007A1777 /* zbar-back.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA5BDC17EF3AFD007A1777 /* zbar-back.png */; };
 		4EDA5BE217EF3AFD007A1777 /* zbar-help.html in Resources */ = {isa = PBXBuildFile; fileRef = 4EDA5BDD17EF3AFD007A1777 /* zbar-help.html */; };
@@ -114,6 +128,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4E1B2D8017FA4814007F6FC5 /* ChooseAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChooseAccountViewController.h; sourceTree = "<group>"; };
+		4E1B2D8117FA4814007F6FC5 /* ChooseAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChooseAccountViewController.m; sourceTree = "<group>"; };
+		4E1B2D8317FA561C007F6FC5 /* OneTimeAddCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OneTimeAddCardViewController.h; sourceTree = "<group>"; };
+		4E1B2D8417FA561C007F6FC5 /* OneTimeAddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OneTimeAddCardViewController.m; sourceTree = "<group>"; };
+		4E1B2D8617FA56BD007F6FC5 /* PaymentController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PaymentController.h; sourceTree = "<group>"; };
+		4E1B2D8717FA56BD007F6FC5 /* PaymentController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PaymentController.m; sourceTree = "<group>"; };
+		4E1B2D8C17FA7E21007F6FC5 /* BorderedView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderedView.h; sourceTree = "<group>"; };
+		4E1B2D8D17FA7E21007F6FC5 /* BorderedView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorderedView.m; sourceTree = "<group>"; };
+		4E1B2D8F17FA7EB4007F6FC5 /* BorderedCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BorderedCell.h; sourceTree = "<group>"; };
+		4E1B2D9017FA7EB4007F6FC5 /* BorderedCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BorderedCell.m; sourceTree = "<group>"; };
 		4E33331C17F620F200588AB9 /* printer-feed-hole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "printer-feed-hole.png"; path = "img/printer-feed-hole.png"; sourceTree = "<group>"; };
 		4E33331D17F621CF00588AB9 /* printer-feed-paper.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "printer-feed-paper.png"; path = "img/printer-feed-paper.png"; sourceTree = "<group>"; };
 		4E33332017F7070000588AB9 /* BillViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BillViewController.h; sourceTree = "<group>"; };
@@ -128,6 +152,21 @@
 		4E33333617F78AC800588AB9 /* PrimaryUIButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PrimaryUIButton.m; sourceTree = "<group>"; };
 		4E33333917F7920C00588AB9 /* SecondaryUIButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondaryUIButton.h; sourceTree = "<group>"; };
 		4E33333A17F7920C00588AB9 /* SecondaryUIButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondaryUIButton.m; sourceTree = "<group>"; };
+		4E59072717FD051F00E4260D /* AccountAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountAdapter.h; sourceTree = "<group>"; };
+		4E59072817FD051F00E4260D /* AccountAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountAdapter.m; sourceTree = "<group>"; };
+		4E59072A17FD056200E4260D /* ResponseAdapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResponseAdapter.h; sourceTree = "<group>"; };
+		4E59072B17FD056200E4260D /* ResponseAdapter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResponseAdapter.m; sourceTree = "<group>"; };
+		4E59072D17FD084000E4260D /* InternalCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InternalCode.h; sourceTree = "<group>"; };
+		4E59073117FD303B00E4260D /* CryptoUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CryptoUtils.h; sourceTree = "<group>"; };
+		4E59073217FD303B00E4260D /* CryptoUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CryptoUtils.m; sourceTree = "<group>"; };
+		4E59073417FDB25000E4260D /* SessionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SessionController.h; sourceTree = "<group>"; };
+		4E59073517FDB25000E4260D /* SessionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SessionController.m; sourceTree = "<group>"; };
+		4E59073B17FDCB6200E4260D /* NSString+URLEncoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+URLEncoding.h"; sourceTree = "<group>"; };
+		4E59073C17FDCB6200E4260D /* NSString+URLEncoding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+URLEncoding.m"; sourceTree = "<group>"; };
+		4E59073E17FE5F2400E4260D /* Card.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Card.h; sourceTree = "<group>"; };
+		4E59073F17FE5F2400E4260D /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
+		4E65BF9E17FA8089006934D4 /* CreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
+		4E65BF9F17FA8089006934D4 /* CreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
 		4E94FE6417EEA1F80082BE7F /* Purple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E94FE6717EEA1F80082BE7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E94FE6917EEA1F80082BE7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -214,6 +253,8 @@
 		4EA9E30F17F87DD70063B66C /* ConfirmViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConfirmViewController.m; sourceTree = "<group>"; };
 		4EA9E31117F883AB0063B66C /* RoundedTextView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RoundedTextView.h; sourceTree = "<group>"; };
 		4EA9E31217F883AB0063B66C /* RoundedTextView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RoundedTextView.m; sourceTree = "<group>"; };
+		4EA9E31417F892DA0063B66C /* ProcessPaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProcessPaymentViewController.h; sourceTree = "<group>"; };
+		4EA9E31517F892DA0063B66C /* ProcessPaymentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ProcessPaymentViewController.m; sourceTree = "<group>"; };
 		4EACF2B217F79745003601C1 /* CardController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardController.h; sourceTree = "<group>"; };
 		4EACF2B317F79745003601C1 /* CardController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardController.m; sourceTree = "<group>"; };
 		4EACF2BA17F79A1E003601C1 /* ChoosePaymentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChoosePaymentViewController.h; sourceTree = "<group>"; };
@@ -235,6 +276,8 @@
 		4EC26B6617F5ECFA007BCF38 /* pay-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay-icon.png"; sourceTree = "<group>"; };
 		4EC26B6717F5ECFA007BCF38 /* pay-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pay-icon@2x.png"; sourceTree = "<group>"; };
 		4EC26B6E17F6157A007BCF38 /* purple-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "purple-2.png"; sourceTree = "<group>"; };
+		4EC4A38217FB64FF006A9B00 /* NetUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetUtils.h; sourceTree = "<group>"; };
+		4EC4A38317FB64FF006A9B00 /* NetUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetUtils.m; sourceTree = "<group>"; };
 		4EDA5BC617EF3AFD007A1777 /* Decoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decoder.h; sourceTree = "<group>"; };
 		4EDA5BC717EF3AFD007A1777 /* Exception.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Exception.h; sourceTree = "<group>"; };
 		4EDA5BC817EF3AFD007A1777 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
@@ -303,16 +346,8 @@
 		4E33331B17F61FB300588AB9 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
-				4E33332017F7070000588AB9 /* BillViewController.h */,
-				4E33332117F7070000588AB9 /* BillViewController.m */,
-				4EC26B4917F5DE2B007BCF38 /* PayLaunchViewController.h */,
-				4EC26B4A17F5DE2B007BCF38 /* PayLaunchViewController.m */,
-				4EACF2BA17F79A1E003601C1 /* ChoosePaymentViewController.h */,
-				4EACF2BB17F79A1E003601C1 /* ChoosePaymentViewController.m */,
-				4EA9E30817F800630063B66C /* AddCardViewController.h */,
-				4EA9E30917F800630063B66C /* AddCardViewController.m */,
-				4EA9E30E17F87DD70063B66C /* ConfirmViewController.h */,
-				4EA9E30F17F87DD70063B66C /* ConfirmViewController.m */,
+				4E65BF9D17FA805B006934D4 /* modal */,
+				4E65BF9C17FA8053006934D4 /* checkout */,
 			);
 			name = controllers;
 			sourceTree = "<group>";
@@ -320,8 +355,15 @@
 		4E33332917F7257C00588AB9 /* controller */ = {
 			isa = PBXGroup;
 			children = (
+				4E59072617FD050300E4260D /* api */,
 				4EACF2B217F79745003601C1 /* CardController.h */,
 				4EACF2B317F79745003601C1 /* CardController.m */,
+				4E1B2D8617FA56BD007F6FC5 /* PaymentController.h */,
+				4E1B2D8717FA56BD007F6FC5 /* PaymentController.m */,
+				4EC4A38217FB64FF006A9B00 /* NetUtils.h */,
+				4EC4A38317FB64FF006A9B00 /* NetUtils.m */,
+				4E59073417FDB25000E4260D /* SessionController.h */,
+				4E59073517FDB25000E4260D /* SessionController.m */,
 			);
 			name = controller;
 			sourceTree = "<group>";
@@ -329,10 +371,13 @@
 		4E33332C17F725F200588AB9 /* model */ = {
 			isa = PBXGroup;
 			children = (
+				4E59073A17FDCB4D00E4260D /* category */,
 				4E33332D17F725FE00588AB9 /* Bill.h */,
 				4E33332E17F725FE00588AB9 /* Bill.m */,
 				4EA9E30B17F8773B0063B66C /* Checkout.h */,
 				4EA9E30C17F8773B0063B66C /* Checkout.m */,
+				4E59073E17FE5F2400E4260D /* Card.h */,
+				4E59073F17FE5F2400E4260D /* Card.m */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -346,6 +391,10 @@
 				4E33333A17F7920C00588AB9 /* SecondaryUIButton.m */,
 				4EA9E31117F883AB0063B66C /* RoundedTextView.h */,
 				4EA9E31217F883AB0063B66C /* RoundedTextView.m */,
+				4E1B2D8C17FA7E21007F6FC5 /* BorderedView.h */,
+				4E1B2D8D17FA7E21007F6FC5 /* BorderedView.m */,
+				4E1B2D8F17FA7EB4007F6FC5 /* BorderedCell.h */,
+				4E1B2D9017FA7EB4007F6FC5 /* BorderedCell.m */,
 			);
 			name = "view-stubs";
 			sourceTree = "<group>";
@@ -357,6 +406,75 @@
 				4E94FE9F17EEA2040082BE7F /* Stripe */,
 			);
 			name = ext;
+			sourceTree = "<group>";
+		};
+		4E59072617FD050300E4260D /* api */ = {
+			isa = PBXGroup;
+			children = (
+				4E59072717FD051F00E4260D /* AccountAdapter.h */,
+				4E59072817FD051F00E4260D /* AccountAdapter.m */,
+				4E59072A17FD056200E4260D /* ResponseAdapter.h */,
+				4E59072B17FD056200E4260D /* ResponseAdapter.m */,
+				4E59072D17FD084000E4260D /* InternalCode.h */,
+			);
+			name = api;
+			sourceTree = "<group>";
+		};
+		4E59073017FD302B00E4260D /* util */ = {
+			isa = PBXGroup;
+			children = (
+				4E59073117FD303B00E4260D /* CryptoUtils.h */,
+				4E59073217FD303B00E4260D /* CryptoUtils.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		4E59073A17FDCB4D00E4260D /* category */ = {
+			isa = PBXGroup;
+			children = (
+				4E59073B17FDCB6200E4260D /* NSString+URLEncoding.h */,
+				4E59073C17FDCB6200E4260D /* NSString+URLEncoding.m */,
+			);
+			name = category;
+			sourceTree = "<group>";
+		};
+		4E59074117FE650F00E4260D /* unused */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = unused;
+			sourceTree = "<group>";
+		};
+		4E65BF9C17FA8053006934D4 /* checkout */ = {
+			isa = PBXGroup;
+			children = (
+				4E33332017F7070000588AB9 /* BillViewController.h */,
+				4E33332117F7070000588AB9 /* BillViewController.m */,
+				4EC26B4917F5DE2B007BCF38 /* PayLaunchViewController.h */,
+				4EC26B4A17F5DE2B007BCF38 /* PayLaunchViewController.m */,
+				4EACF2BA17F79A1E003601C1 /* ChoosePaymentViewController.h */,
+				4EACF2BB17F79A1E003601C1 /* ChoosePaymentViewController.m */,
+				4EA9E30E17F87DD70063B66C /* ConfirmViewController.h */,
+				4EA9E30F17F87DD70063B66C /* ConfirmViewController.m */,
+				4EA9E31417F892DA0063B66C /* ProcessPaymentViewController.h */,
+				4EA9E31517F892DA0063B66C /* ProcessPaymentViewController.m */,
+				4E1B2D8017FA4814007F6FC5 /* ChooseAccountViewController.h */,
+				4E1B2D8117FA4814007F6FC5 /* ChooseAccountViewController.m */,
+				4E1B2D8317FA561C007F6FC5 /* OneTimeAddCardViewController.h */,
+				4E1B2D8417FA561C007F6FC5 /* OneTimeAddCardViewController.m */,
+			);
+			name = checkout;
+			sourceTree = "<group>";
+		};
+		4E65BF9D17FA805B006934D4 /* modal */ = {
+			isa = PBXGroup;
+			children = (
+				4EA9E30817F800630063B66C /* AddCardViewController.h */,
+				4EA9E30917F800630063B66C /* AddCardViewController.m */,
+				4E65BF9E17FA8089006934D4 /* CreateAccountViewController.h */,
+				4E65BF9F17FA8089006934D4 /* CreateAccountViewController.m */,
+			);
+			name = modal;
 			sourceTree = "<group>";
 		};
 		4E94FE5B17EEA1F80082BE7F = {
@@ -398,9 +516,11 @@
 		4E94FE6D17EEA1F80082BE7F /* Purple */ = {
 			isa = PBXGroup;
 			children = (
+				4E59073017FD302B00E4260D /* util */,
 				4E33333817F78D6000588AB9 /* ext */,
 				4E33332C17F725F200588AB9 /* model */,
 				4E33332917F7257C00588AB9 /* controller */,
+				4E59074117FE650F00E4260D /* unused */,
 				4EC26B3F17F5D967007BCF38 /* view */,
 				4E94FE7617EEA1F80082BE7F /* AppDelegate.h */,
 				4E94FE7717EEA1F80082BE7F /* AppDelegate.m */,
@@ -567,16 +687,16 @@
 		4EC26B3F17F5D967007BCF38 /* view */ = {
 			isa = PBXGroup;
 			children = (
+				4EC26B4017F5D973007BCF38 /* view-util */,
 				4E33333417F78AB000588AB9 /* view-stubs */,
 				4E33331B17F61FB300588AB9 /* controllers */,
 				4EC26B4217F5DB09007BCF38 /* controller-stubs */,
-				4EC26B4017F5D973007BCF38 /* util */,
 				4E94FF3E17EEB9680082BE7F /* img */,
 			);
 			name = view;
 			sourceTree = "<group>";
 		};
-		4EC26B4017F5D973007BCF38 /* util */ = {
+		4EC26B4017F5D973007BCF38 /* view-util */ = {
 			isa = PBXGroup;
 			children = (
 				4EC26B3D17F5D91D007BCF38 /* Colors.h */,
@@ -584,7 +704,7 @@
 				4E33333117F7731C00588AB9 /* ViewUtil.h */,
 				4E33333217F7731C00588AB9 /* ViewUtil.m */,
 			);
-			name = util;
+			name = "view-util";
 			sourceTree = "<group>";
 		};
 		4EC26B4217F5DB09007BCF38 /* controller-stubs */ = {
@@ -818,15 +938,26 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E65BFA017FA80A2006934D4 /* CreateAccountViewController.m in Sources */,
+				4E1B2D9117FA7EEE007F6FC5 /* BorderedCell.m in Sources */,
+				4E1B2D8E17FA7E30007F6FC5 /* BorderedView.m in Sources */,
+				4E1B2D8817FA5719007F6FC5 /* PaymentController.m in Sources */,
+				4E1B2D8517FA562E007F6FC5 /* OneTimeAddCardViewController.m in Sources */,
+				4E1B2D8217FA4851007F6FC5 /* ChooseAccountViewController.m in Sources */,
+				4EA9E31617F892EB0063B66C /* ProcessPaymentViewController.m in Sources */,
 				4EA9E31317F883DC0063B66C /* RoundedTextView.m in Sources */,
 				4EA9E31017F87E220063B66C /* ConfirmViewController.m in Sources */,
 				4EA9E30D17F877E50063B66C /* Checkout.m in Sources */,
 				4EA9E30A17F800BE0063B66C /* AddCardViewController.m in Sources */,
 				4EACF2BC17F79A71003601C1 /* ChoosePaymentViewController.m in Sources */,
+				4E59073317FD303B00E4260D /* CryptoUtils.m in Sources */,
 				4EACF2B417F7977D003601C1 /* CardController.m in Sources */,
 				4E33333717F78AE800588AB9 /* PrimaryUIButton.m in Sources */,
+				4EC4A38417FB64FF006A9B00 /* NetUtils.m in Sources */,
 				4E33333317F7735900588AB9 /* ViewUtil.m in Sources */,
 				4E33332F17F7270F00588AB9 /* Bill.m in Sources */,
+				4E59072C17FD056200E4260D /* ResponseAdapter.m in Sources */,
+				4E59073617FDB25000E4260D /* SessionController.m in Sources */,
 				4E33332517F707F500588AB9 /* BillViewController.m in Sources */,
 				4E33332417F707EA00588AB9 /* TertiaryViewController.m in Sources */,
 				4EC26B5C17F5E7CD007BCF38 /* PayLaunchViewController.m in Sources */,
@@ -837,6 +968,7 @@
 				4EB9AC8E17EEBE050013B382 /* CardViewController.m in Sources */,
 				4E94FF0517EEA2040082BE7F /* PKCard.m in Sources */,
 				4E94FF0B17EEA2040082BE7F /* PKView.m in Sources */,
+				4E59073D17FDCB6200E4260D /* NSString+URLEncoding.m in Sources */,
 				4E94FF0717EEA2040082BE7F /* PKCardExpiry.m in Sources */,
 				4E94FEFD17EEA2040082BE7F /* STPCard.m in Sources */,
 				4E94FE8117EEA1F80082BE7F /* PayViewController.m in Sources */,
@@ -847,11 +979,13 @@
 				4E94FF0A17EEA2040082BE7F /* PKUSAddressZip.m in Sources */,
 				4E94FEFF17EEA2040082BE7F /* STPView.m in Sources */,
 				4E94FF0917EEA2040082BE7F /* PKTextField.m in Sources */,
+				4E59072917FD051F00E4260D /* AccountAdapter.m in Sources */,
 				4E94FEFE17EEA2040082BE7F /* STPToken.m in Sources */,
 				4E94FE7E17EEA1F80082BE7F /* FirstViewController.m in Sources */,
 				4E94FF0117EEA2040082BE7F /* StripeError.m in Sources */,
 				4E94FE7417EEA1F80082BE7F /* main.m in Sources */,
 				4E94FF0617EEA2040082BE7F /* PKCardCVC.m in Sources */,
+				4E59074017FE5F2400E4260D /* Card.m in Sources */,
 				4E94FF0817EEA2040082BE7F /* PKCardNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
