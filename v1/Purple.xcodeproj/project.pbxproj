@@ -35,7 +35,6 @@
 		4E94FE7817EEA1F80082BE7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94FE7717EEA1F80082BE7F /* AppDelegate.m */; };
 		4E94FE7B17EEA1F80082BE7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E94FE7917EEA1F80082BE7F /* Main.storyboard */; };
 		4E94FE7E17EEA1F80082BE7F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94FE7D17EEA1F80082BE7F /* FirstViewController.m */; };
-		4E94FE8117EEA1F80082BE7F /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94FE8017EEA1F80082BE7F /* PayViewController.m */; };
 		4E94FE8317EEA1F80082BE7F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E94FE8217EEA1F80082BE7F /* Images.xcassets */; };
 		4E94FE8A17EEA1F80082BE7F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE8917EEA1F80082BE7F /* XCTest.framework */; };
 		4E94FE8B17EEA1F80082BE7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6717EEA1F80082BE7F /* Foundation.framework */; };
@@ -89,7 +88,6 @@
 		4EA9E31617F892EB0063B66C /* ProcessPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA9E31517F892DA0063B66C /* ProcessPaymentViewController.m */; };
 		4EACF2B417F7977D003601C1 /* CardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EACF2B317F79745003601C1 /* CardController.m */; };
 		4EACF2BC17F79A71003601C1 /* ChoosePaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EACF2BB17F79A1E003601C1 /* ChoosePaymentViewController.m */; };
-		4EB9AC8E17EEBE050013B382 /* CardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E94FF4017EEBB420082BE7F /* CardViewController.m */; };
 		4EC26B3C17F5D819007BCF38 /* tabbarbg.png in Resources */ = {isa = PBXBuildFile; fileRef = 4EC26B3B17F5D819007BCF38 /* tabbarbg.png */; };
 		4EC26B4117F5DA30007BCF38 /* Colors.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC26B3E17F5D91D007BCF38 /* Colors.m */; };
 		4EC26B4517F5DB75007BCF38 /* PrimaryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EC26B4417F5DB25007BCF38 /* PrimaryViewController.m */; };
@@ -114,7 +112,6 @@
 		4EDA5BEA17EF3B4E007A1777 /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BE917EF3B4E007A1777 /* CoreVideo.framework */; };
 		4EDA5BEC17EF3B56007A1777 /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BEB17EF3B56007A1777 /* CoreAudio.framework */; };
 		4EDA5BEE17EF3B60007A1777 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EDA5BED17EF3B60007A1777 /* AVFoundation.framework */; };
-		4EDA5BF117EF3D09007A1777 /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EDA5BF017EF3CA6007A1777 /* ScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,8 +177,6 @@
 		4E94FE7A17EEA1F80082BE7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		4E94FE7C17EEA1F80082BE7F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
 		4E94FE7D17EEA1F80082BE7F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		4E94FE7F17EEA1F80082BE7F /* PayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
-		4E94FE8017EEA1F80082BE7F /* PayViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		4E94FE8217EEA1F80082BE7F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E94FE8817EEA1F80082BE7F /* PurpleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PurpleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E94FE8917EEA1F80082BE7F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -243,8 +238,6 @@
 		4E94FEFC17EEA2040082BE7F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		4E94FF3A17EEA2BD0082BE7F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		4E94FF3C17EEB95F0082BE7F /* ob-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ob-logo.png"; sourceTree = "<group>"; };
-		4E94FF3F17EEBB420082BE7F /* CardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CardViewController.h; sourceTree = "<group>"; };
-		4E94FF4017EEBB420082BE7F /* CardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CardViewController.m; sourceTree = "<group>"; };
 		4EA9E30817F800630063B66C /* AddCardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AddCardViewController.h; sourceTree = "<group>"; };
 		4EA9E30917F800630063B66C /* AddCardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AddCardViewController.m; sourceTree = "<group>"; };
 		4EA9E30B17F8773B0063B66C /* Checkout.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Checkout.h; sourceTree = "<group>"; };
@@ -308,8 +301,6 @@
 		4EDA5BE917EF3B4E007A1777 /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		4EDA5BEB17EF3B56007A1777 /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
 		4EDA5BED17EF3B60007A1777 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
-		4EDA5BEF17EF3CA6007A1777 /* ScanViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
-		4EDA5BF017EF3CA6007A1777 /* ScanViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,13 +429,6 @@
 			name = category;
 			sourceTree = "<group>";
 		};
-		4E59074117FE650F00E4260D /* unused */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = unused;
-			sourceTree = "<group>";
-		};
 		4E65BF9C17FA8053006934D4 /* checkout */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,19 +504,12 @@
 				4E33333817F78D6000588AB9 /* ext */,
 				4E33332C17F725F200588AB9 /* model */,
 				4E33332917F7257C00588AB9 /* controller */,
-				4E59074117FE650F00E4260D /* unused */,
 				4EC26B3F17F5D967007BCF38 /* view */,
 				4E94FE7617EEA1F80082BE7F /* AppDelegate.h */,
 				4E94FE7717EEA1F80082BE7F /* AppDelegate.m */,
 				4E94FE7917EEA1F80082BE7F /* Main.storyboard */,
-				4EDA5BEF17EF3CA6007A1777 /* ScanViewController.h */,
-				4EDA5BF017EF3CA6007A1777 /* ScanViewController.m */,
 				4E94FE7C17EEA1F80082BE7F /* FirstViewController.h */,
 				4E94FE7D17EEA1F80082BE7F /* FirstViewController.m */,
-				4E94FE7F17EEA1F80082BE7F /* PayViewController.h */,
-				4E94FE8017EEA1F80082BE7F /* PayViewController.m */,
-				4E94FF3F17EEBB420082BE7F /* CardViewController.h */,
-				4E94FF4017EEBB420082BE7F /* CardViewController.m */,
 				4E94FE8217EEA1F80082BE7F /* Images.xcassets */,
 				4E94FE6E17EEA1F80082BE7F /* Supporting Files */,
 			);
@@ -964,14 +941,11 @@
 				4EC26B4817F5DCA9007BCF38 /* SecondaryViewController.m in Sources */,
 				4EC26B4517F5DB75007BCF38 /* PrimaryViewController.m in Sources */,
 				4EC26B4117F5DA30007BCF38 /* Colors.m in Sources */,
-				4EDA5BF117EF3D09007A1777 /* ScanViewController.m in Sources */,
-				4EB9AC8E17EEBE050013B382 /* CardViewController.m in Sources */,
 				4E94FF0517EEA2040082BE7F /* PKCard.m in Sources */,
 				4E94FF0B17EEA2040082BE7F /* PKView.m in Sources */,
 				4E59073D17FDCB6200E4260D /* NSString+URLEncoding.m in Sources */,
 				4E94FF0717EEA2040082BE7F /* PKCardExpiry.m in Sources */,
 				4E94FEFD17EEA2040082BE7F /* STPCard.m in Sources */,
-				4E94FE8117EEA1F80082BE7F /* PayViewController.m in Sources */,
 				4E94FF0017EEA2040082BE7F /* Stripe.m in Sources */,
 				4E94FF0417EEA2040082BE7F /* PKAddressZip.m in Sources */,
 				4E94FE7817EEA1F80082BE7F /* AppDelegate.m in Sources */,

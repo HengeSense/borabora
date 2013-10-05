@@ -413,34 +413,27 @@ Oakville, ON L6H 3H6</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u19-ug-PgF">
-                                <rect key="frame" x="0.0" y="20" width="320" height="132"/>
+                                <rect key="frame" x="0.0" y="20" width="320" height="484"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                 <connections>
                                     <segue destination="FRX-XC-Awi" kind="embed" id="LxX-40-Oik"/>
                                 </connections>
                             </containerView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IeH-yg-PyM" customClass="SecondaryUIButton">
-                                <rect key="frame" x="206" y="160" width="94" height="38"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                <state key="normal" title="add card ">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="addTipButtonPressed:" destination="nrV-QO-nKm" eventType="touchUpInside" id="MuJ-Y4-DhG"/>
-                                    <segue destination="1Hn-NF-sFF" kind="modal" id="QgT-bM-UzG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="Credit Card" id="l3P-YY-pUc"/>
+                    <navigationItem key="navigationItem" title="Credit Card" id="l3P-YY-pUc">
+                        <barButtonItem key="rightBarButtonItem" title="Add Card" id="cnn-qL-wmx">
+                            <connections>
+                                <segue destination="1Hn-NF-sFF" kind="modal" id="FNI-Uf-WQt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <connections>
-                        <outlet property="buttonAddCard" destination="IeH-yg-PyM" id="5IU-Yl-HTk"/>
                         <outlet property="containerCards" destination="u19-ug-PgF" id="j34-Uy-8IB"/>
                     </connections>
                 </viewController>
@@ -466,7 +459,7 @@ Oakville, ON L6H 3H6</string>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aMB-Fl-4IO" customClass="SecondaryUIButton">
-                                <rect key="frame" x="212" y="72" width="88" height="38"/>
+                                <rect key="frame" x="247" y="72" width="53" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="done">
@@ -476,6 +469,10 @@ Oakville, ON L6H 3H6</string>
                                     <action selector="addButtonPressed:" destination="5Vo-PM-H82" eventType="touchUpInside" id="QMf-n1-tqc"/>
                                 </connections>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WB2-k7-cl7">
+                                <rect key="frame" x="219" y="76" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -488,6 +485,7 @@ Oakville, ON L6H 3H6</string>
                     </navigationItem>
                     <connections>
                         <outlet property="buttonAddCard" destination="aMB-Fl-4IO" id="dhR-ek-EQw"/>
+                        <outlet property="indicatorGetToken" destination="WB2-k7-cl7" id="d9L-a9-fSv"/>
                         <outlet property="viewCreditCardContainer" destination="GFY-vz-4Sd" id="LcN-D3-jAw"/>
                     </connections>
                 </viewController>
@@ -516,8 +514,8 @@ Oakville, ON L6H 3H6</string>
         <scene sceneID="coF-Ek-bbG">
             <objects>
                 <tableViewController id="FRX-XC-Awi" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PSc-hi-1q3">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="132"/>
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="PSc-hi-1q3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="484"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>

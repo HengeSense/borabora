@@ -30,7 +30,7 @@ static CardController* instance;
     return self;
 }
 
--(NSArray*) getCards {
+-(NSMutableArray*) getCards {
     return cards;
 }
 
@@ -38,33 +38,25 @@ static CardController* instance;
     return [cards count];
 }
 
--(void) refreshCardsForCurrentCustomer {
+-(void) refreshCardsForCurrentCustomerWithHandler:(void (^)(BOOL success, NSArray* cards))handler{
     
-    NSLog(@"a");
     NSString* session = [[SessionController getInstance] getSession];
     if (session == nil) { return; }
     
-    NSLog(@"b");
-    cards = [AccountAdapter getCardsForSession:session];
-    
-    NSLog(@"c");
-    [AccountAdapter getUserForSession:session Handler:
-     ^(NSURLResponse *response, NSData *data, NSError *error) {
-         
-         // successful
-         if ([NetUtils wasRequestSuccessful:response]) {
-             
-             NSLog(@"f");
-             [NetUtils printJSONDictionaryFromData:data];
-             
-             // failed
-         } else {
-             NSLog(@"e");
-             int internalCode = [NetUtils getInternalErrorCodeFromData:data];
-             [NetUtils showErrorMessageFromCode:internalCode];
-         }
-         
-     }];
+    [AccountAdapter getCardsForSession:session Handler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        
+        BOOL success = false;
+        // session successful
+        if ([NetUtils wasRequestSuccessful:response]) {
+            cards = [AccountAdapter parseCardsFromData:data];
+            success = true;
+        } else {
+            NSLog(@"Error");
+        }
+        
+        handler(success,cards);
+    }];
+
 }
 
 @end

@@ -14,8 +14,9 @@
 +(void) roundView:(UIView*)view;
 +(void) addLineBorder:(UIView*)view;
 +(NSString*) convertFloatToMoneyString:(float)amount;
-+(UIImage*) getCardImageForCard:(PKCard*)card;
+//+(UIImage*) getCardImageForCard:(PKCard*)card;
 +(UIImage*) getCardImageForCardType:(NSString*)type;
++(NSString*) cardNumberToType:(NSString*) number;
 +(void)addDisclosureIndicatorToTableCell:(UITableViewCell*) cell;
 +(NSString*) getDefaultFontFamily;
 +(NSString*) getMembershipName;

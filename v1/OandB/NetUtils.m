@@ -41,6 +41,13 @@ static NSString* root = @"https://healthcubed.ca/purple/u/resources/1";
     return request;
 }
 
++(NSMutableURLRequest*) getDELETERequest:(NSString*)params FromURL:(NSString*)url {
+    NSString* path = [NSString stringWithFormat:@"%@?%@",url,params];
+    NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:path]];
+    request.HTTPMethod = @"DELETE";
+    return request;
+}
+
 +(NSMutableURLRequest*) getGETRequest:(NSString*)params FromURL:(NSString*)url {
     NSString* path = [NSString stringWithFormat:@"%@?%@",url,params];
     NSMutableURLRequest* request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:path]];

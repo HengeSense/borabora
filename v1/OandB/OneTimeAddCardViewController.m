@@ -9,6 +9,9 @@
 #import "OneTimeAddCardViewController.h"
 #import "PaymentController.h"
 #import "Checkout.h"
+#import "Card.h"
+#import "PKCard.h"
+#import "ViewUtil.h"
 
 @interface OneTimeAddCardViewController ()
 
@@ -59,7 +62,10 @@ static PKCard* lastValidCard;
 
 - (IBAction)reviewButtonPressed:(id)sender {
 
-    [[Checkout getCurrentCheckout] setCard:lastValidCard];
+    Card* c = [[Card alloc] initWithLastFour:lastValidCard.last4 Type:[ViewUtil cardNumberToType:lastValidCard.number]];
+    [c setPKCard:lastValidCard];
+    
+    [[Checkout getCurrentCheckout] setCard:c];
     
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ConfirmViewController"];

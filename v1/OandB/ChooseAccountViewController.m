@@ -56,18 +56,14 @@ static int TAG_OF_PASSWORD_ALERT = 0;
     [tableView reloadData];
 }
 
-
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-
 - (UITableViewCell *)tableView:(UITableView *)tv cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"Getting cell");
-    
     static NSString *CellIdentifier = @"AccountCell";
     UITableViewCell *cell = [tv dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
@@ -127,8 +123,6 @@ static int TAG_OF_PASSWORD_ALERT = 0;
     }
 }
 
-
-
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     int alertTag = [alertView tag];
@@ -137,10 +131,15 @@ static int TAG_OF_PASSWORD_ALERT = 0;
         if (buttonIndex == 1) {
             NSString *username = [alertView textFieldAtIndex:0].text;
             NSString *password = [alertView textFieldAtIndex:1].text;
-
+            
+            UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Logging in" message:@"Please wait..." delegate:self cancelButtonTitle:nil otherButtonTitles: nil];
+            [alert show];
+            
             // create a session
             [AccountAdapter createSessionWithEmail:username Password:[CryptoUtils md5:password] Handler:
              ^(NSURLResponse *response, NSData *data, NSError *error) {
+                 
+                 [alert dismissWithClickedButtonIndex:0 animated:YES];
                  
                  // session successful
                  if ([NetUtils wasRequestSuccessful:response]) {
@@ -155,32 +154,27 @@ static int TAG_OF_PASSWORD_ALERT = 0;
                           
                           // user info successful
                           if ([NetUtils wasRequestSuccessful:response]) {
-                          
-                              [NetUtils printJSONDictionaryFromData:data];
-                              
+
                               NSString* stripeCustomer = [NetUtils getJSONValueForKey:kKEY_STRIPECUSTOMER FromData:data];
                               [[SessionController getInstance] setStripeCustomer:stripeCustomer];
-                
+
                               UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
                               UIViewController *vc = [storyboard instantiateViewControllerWithIdentifier:@"ChoosePaymentViewController"];
-                              
+
                               [self.navigationController pushViewController:vc animated:YES];
-                          
+
                           // user info failed
                           } else {
                               
                               int internalCode = [NetUtils getInternalErrorCodeFromData:data];
                               [NetUtils showErrorMessageFromCode:internalCode];
                           }
-                    
                       }];
-                     
+
                 // session failed
                  } else {
-                     
                      int internalCode = [NetUtils getInternalErrorCodeFromData:data];
                      [NetUtils showErrorMessageFromCode:internalCode];
-                     
                  }
              }];
         }

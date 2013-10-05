@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>1F1344F8-B67E-4311-B919-3D832552A756</string>
+	<key>IDESourceControlProjectName</key>
+	<string>purple-merchant</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>604726A5-6BD7-4D42-B731-D41825B9C7A5</key>
+		<string>https://github.com/mfiume/borabora.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>merchant/purple-merchant/purple-merchant.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>604726A5-6BD7-4D42-B731-D41825B9C7A5</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/mfiume/borabora.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>604726A5-6BD7-4D42-B731-D41825B9C7A5</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>604726A5-6BD7-4D42-B731-D41825B9C7A5</string>
+			<key>IDESourceControlWCCName</key>
+			<string>borabora</string>
+		</dict>
+	</array>
+</dict>
+</plist>

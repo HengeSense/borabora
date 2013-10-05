@@ -10,14 +10,14 @@
 #import "STPToken.h"
 
 @interface CardController : NSObject {
-    NSArray* cards;
+    NSMutableArray* cards;
 }
 
 +(CardController*) getInstance;
 
--(NSArray*) getCards;
+-(NSMutableArray*) getCards;
 -(int) getNumCards;
 
--(void) refreshCardsForCurrentCustomer;
+-(void) refreshCardsForCurrentCustomerWithHandler:(void (^)(BOOL success, NSArray* cards))handler;
 
 @end

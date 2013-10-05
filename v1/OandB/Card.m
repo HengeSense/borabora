@@ -19,12 +19,14 @@
     return self;
 }
 
--(void)setToken:(NSString*)t { token = t; }
--(void)setIndex:(int)i { index = i; }
+-(void) setPKCard:(PKCard*)p {
+    pkcard = p;
+}
+-(void)setStripeCardID:(NSString *)c { stripeCardID = c; }
 
 -(NSString*)getType { return type; }
 -(NSString*)getLastFour { return lastFour; }
--(int)getIndex { return index; }
--(STPToken*)getToken { return token; }
+-(NSString*)getStripeCardID { return stripeCardID; }
+-(PKCard*)getPKCard { return pkcard; }
 
 @end

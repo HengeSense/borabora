@@ -13,6 +13,5 @@
     UITableView* cardTableView;
 }
 @property (strong, nonatomic) IBOutlet UIView *containerCards;
-@property (strong, nonatomic) IBOutlet UIButton *buttonAddCard;
 
 @end

@@ -43,30 +43,52 @@
                            completionHandler:handler];
 }
 
-+(NSArray*) getCardsForSession:(NSString*)session {
++(void) createPaymentWithToken:(NSString*)token Amount:(double)amount Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler {
+
+    NSString *body = [NSString stringWithFormat:@"stripeToken=%@&amount=%.02f", token,amount];
+    NSMutableURLRequest* request = [NetUtils getPOSTRequest:body FromURL:[NetUtils getPayURL]];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:handler];
+}
+
++(void) createPaymentWithStripeCard:(NSString*)stripeCardID  Session:(NSString*)session Amount:(double)amount Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler {
+    NSString *body = [NSString stringWithFormat:@"stripeCardID=%@&session=%@&amount=%.02f", stripeCardID,session,amount];
+    NSMutableURLRequest* request = [NetUtils getPOSTRequest:body FromURL:[NetUtils getPayURL]];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:handler];
+}
+
++(void) getCardsForSession:(NSString*)session
+                   Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler {
     
     NSString* body = [NSString stringWithFormat:@"session=%@",session];
     NSMutableURLRequest* request = [NetUtils getGETRequest:body FromURL:[NetUtils getCardURL]];
-    
-    NSURLResponse* response;
-    NSError* error;
-    
-    NSData* data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:handler];
+}
+
++(NSMutableArray*) parseCardsFromData:(NSData*)data {
     
     NSArray* jsonCards = [NetUtils getJSONValueForKey:@"data" FromData:data];
-
+    
     NSMutableArray* cards = [[NSMutableArray alloc] init];
+    
+    [NetUtils printJSONDictionaryFromData:data];
     
     int counter = 0;
     for (NSDictionary* dict in jsonCards) {
         NSString* lastFour = [dict objectForKey:@"last4"];
         NSString* type = [dict objectForKey:@"type"];
+        NSString* stripeID = [dict objectForKey:@"id"];
         Card* card = [[Card alloc] initWithLastFour:lastFour Type:type];
-        [card setIndex:counter];
+        [card setStripeCardID:stripeID];
         [cards addObject:card];
         counter++;
     }
-
+    
     return cards;
 }
 
@@ -74,6 +96,15 @@
     
     NSString* params = [NSString stringWithFormat:@"session=%@",[session urlEncodeUsingEncoding:NSUTF8StringEncoding]];
     NSMutableURLRequest* request = [NetUtils getGETRequest:params FromURL:[NetUtils getAccountURL]];
+    [NSURLConnection sendAsynchronousRequest:request
+                                       queue:[NSOperationQueue mainQueue]
+                           completionHandler:handler];
+}
+
++(void) deleteStripeCard:(NSString*)card Session:(NSString*)session Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler {
+    
+    NSString* body = [NSString stringWithFormat:@"session=%@&stripeCardID=%@",session,card];
+    NSMutableURLRequest* request = [NetUtils getDELETERequest:body FromURL:[NetUtils getCardURL]];
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]
                            completionHandler:handler];

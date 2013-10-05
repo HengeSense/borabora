@@ -10,6 +10,9 @@
 #import "STPView.h"
 #import "Stripe.h"
 #import "PaymentController.h"
+#import "NetUtils.h"
+#import "AccountAdapter.h"
+#import "SessionController.h"
 
 @interface ProcessPaymentViewController ()
 
@@ -47,6 +50,13 @@
     [buttonDone setEnabled:YES];
 }
 
+-(void) checkoutFailed {
+    [indicatorProgress setHidden:YES];
+    [labelComplete setHidden:NO];
+    [labelComplete setText:@"checkout failed"];
+    [buttonDone setEnabled:YES];
+}
+
 - (IBAction)doneButtonPressed:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
@@ -60,22 +70,24 @@
     Card* card = [c getCard];
     
     [Stripe setDefaultPublishableKey:[PaymentController getStripeToken]];
-    if ([card getToken] != nil) {
-        [self payWithCardToken:[card getToken]];
+    if ([card getPKCard] != nil) {
+        
+        PKCard* pkCard = [card getPKCard];
+        STPCard* scard = [[STPCard alloc] init];
+        
+        scard.number = pkCard.number;
+        scard.expMonth = pkCard.expMonth;
+        scard.expYear = pkCard.expYear;
+        scard.cvc = pkCard.cvc;
+        
+        [Stripe createTokenWithCard:scard
+                     publishableKey:[PaymentController getStripeToken]
+                         completion:^(STPToken *token, NSError *error) {
+                             [self payWithCardToken:token.tokenId];
+                         }];
     } else {
-        [self payWithCardIndex:[card getIndex]];
+        [self payWithStripeCardID:[card getStripeCardID]];
     }
-}
-
--(STPCard*) STPCardFromPKCard:(PKCard*)card {
-    STPCard* scard = [[STPCard alloc] init];
-    
-    scard.number = card.number;
-    scard.expMonth = card.expMonth;
-    scard.expYear = card.expYear;
-    scard.cvc = card.cvc;
-    
-    return scard;
 }
 
 - (void)handleError:(NSError *)error
@@ -88,31 +100,35 @@
     [message show];
 }
 
-- (void)payWithCardIndex:(int)index
+- (void)payWithStripeCardID:(NSString*)cardID
 {
-    NSLog(@"TODO");
-    // TODO
+    NSLog(@"Checking out with index %@ and session %@",cardID,[[SessionController getInstance] getSession]);
+    
+    [AccountAdapter createPaymentWithStripeCard:cardID Session:[[SessionController getInstance] getSession] Amount:[checkout getTotalCheckoutAmount] Handler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        // session successful
+        if ([NetUtils wasRequestSuccessful:response]) {
+            [self checkoutSuccessful];
+            [NetUtils printJSONDictionaryFromData:data];
+        } else {
+            [self checkoutFailed];
+            NSLog(@"Error");
+        }
+    }];
 }
 
-- (void)payWithCardToken:(STPToken *)token
+- (void)payWithCardToken:(NSString *)token
 {
-    NSLog(@"Received token %@", token.tokenId);
+    NSLog(@"Paying with token %@", token);
     
-    NSMutableURLRequest *request = [[NSMutableURLRequest alloc] initWithURL:[NSURL URLWithString:@"https://healthcubed.ca/borabora/u/pay.php"]];
-    request.HTTPMethod = @"POST";
-    NSString *body     = [NSString stringWithFormat:@"stripeToken=%@&amount=%.02f", token.tokenId,[checkout getTotalCheckoutAmount]];
-    request.HTTPBody   = [body dataUsingEncoding:NSUTF8StringEncoding];
-    
-    [NSURLConnection sendAsynchronousRequest:request
-                                       queue:[NSOperationQueue mainQueue]
-                           completionHandler:^(NSURLResponse *response, NSData *data, NSError *error) {
-                               if (error) {
-                                   // Handle error
-                                   NSLog(@"Payment failed!");
-                               } else {
-                                   [self checkoutSuccessful];
-                               }
-                           }];
+    [AccountAdapter createPaymentWithToken:token Amount:[checkout getTotalCheckoutAmount] Handler:^(NSURLResponse *response, NSData *data, NSError *error) {
+        // session successful
+        if ([NetUtils wasRequestSuccessful:response]) {
+            [self checkoutSuccessful];
+        } else {
+            [self checkoutFailed];
+            NSLog(@"Error");
+        }
+    }];
 }
 
 

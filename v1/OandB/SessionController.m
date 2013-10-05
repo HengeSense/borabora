@@ -34,7 +34,6 @@ static SessionController* instance;
 
 -(void)setStripeCustomer:(NSString *)c {
     customer = c;
-    [[CardController getInstance] refreshCardsForCurrentCustomer];
 }
 
 -(NSString*) getSession {

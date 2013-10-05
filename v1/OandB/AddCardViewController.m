@@ -19,7 +19,7 @@
 
 @implementation AddCardViewController
 
-@synthesize buttonAddCard,viewCreditCardContainer;
+@synthesize buttonAddCard,viewCreditCardContainer,indicatorGetToken;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,45 +50,37 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
-static STPToken* lastValidToken;
-
 - (void)stripeView:(STPView *)view withCard:(PKCard *)card isValid:(BOOL)valid
 {
-
     // Toggle navigation, for example
     [buttonAddCard setEnabled:valid];
-
-    if (valid) {
-        [view createToken:^(STPToken *token, NSError *error) {
-            if (error) {
-                // Handle error
-                lastValidToken = nil;
-            } else {
-                // Send off token to your server
-                lastValidToken = token;
-            }
-        }];
-    } else {
-        lastValidToken = nil;
-    }
-}
-
--(void) addCardByToken:(STPToken*) token {
-    [AccountAdapter createCardForSession:[[SessionController getInstance] getSession] WithToken:token Handler:^(NSURLResponse *response, NSData *data, NSError *error) {
-        // session successful
-        if ([NetUtils wasRequestSuccessful:response]) {
-            [NetUtils printJSONDictionaryFromData:data];
-            [self dismissViewControllerAnimated:YES completion:nil];
-        } else {
-            NSLog(@"Error");
-        }
-    }];
 }
 
 - (IBAction)addButtonPressed:(id)sender {
-    if (lastValidToken != nil) {
-        [self addCardByToken:lastValidToken];
-    }
+    
+    UIAlertView* alert = [[UIAlertView alloc] initWithTitle:@"Adding card" message:@"Please wait..." delegate:nil cancelButtonTitle:nil otherButtonTitles:nil];
+    [alert show];
+    
+    [self.stripeView createToken:^(STPToken *token, NSError *error) {
+        [indicatorGetToken setHidden:YES];
+        
+        UIAlertView* alertError = [[UIAlertView alloc] initWithTitle:@"Uh ok" message:@"Problem adding card" delegate:nil cancelButtonTitle:@"Dismiss" otherButtonTitles:nil];
+        
+        if (error) {
+            [alert dismissWithClickedButtonIndex:0 animated:YES];
+            [alertError show];
+        } else {
+            [AccountAdapter createCardForSession:[[SessionController getInstance] getSession] WithToken:token Handler:^(NSURLResponse *response, NSData *data, NSError *error) {
+                // session successful
+                if ([NetUtils wasRequestSuccessful:response]) {
+                    [alert dismissWithClickedButtonIndex:0 animated:YES];
+                    [self dismissViewControllerAnimated:YES completion:nil];
+                } else {
+                    [alertError show];
+                }
+            }];
+        }
+    }];
 }
 
 @end

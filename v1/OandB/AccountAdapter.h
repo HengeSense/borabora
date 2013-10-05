@@ -19,9 +19,19 @@
 
 +(void) createCardForSession:(NSString*)session WithToken:(STPToken*)token Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler;
 
+
+
++(void) createPaymentWithToken:(NSString*)token Amount:(double)amount Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler;
+
++(void) createPaymentWithStripeCard:(NSString*)stripeCardID Session:(NSString*)session Amount:(double)amount Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler;
+
++(void) deleteStripeCard:(NSString*)card Session:(NSString*)session Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler;
+
 +(void) getUserForSession:(NSString*)session Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler;
 
-// Sync calls
-+(NSArray*) getCardsForSession:(NSString*)session;
++(void) getCardsForSession:(NSString*)session Handler:(void (^)(NSURLResponse *response, NSData *data, NSError *error))handler;
+
+// parse
++(NSMutableArray*) parseCardsFromData:(NSData*)data;
 
 @end

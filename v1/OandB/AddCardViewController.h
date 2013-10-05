@@ -21,5 +21,6 @@
 
 - (IBAction)cancelButtonPressed:(id)sender;
 
+@property (strong, nonatomic) IBOutlet UIActivityIndicatorView *indicatorGetToken;
 
 @end

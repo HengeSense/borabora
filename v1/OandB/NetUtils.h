@@ -15,6 +15,7 @@
 +(NSString*) getSessionURL;
 +(NSString*) getCardURL;
 +(NSMutableURLRequest*) getPOSTRequest:(NSString*)r FromURL:(NSString*)url;
++(NSMutableURLRequest*) getDELETERequest:(NSString*)r FromURL:(NSString*)url;
 +(NSMutableURLRequest*) getGETRequest:(NSString*)r FromURL:(NSString*)url;
 +(int) getResponseCodeFromResponse:(NSURLResponse*)response;
 +(BOOL) wasRequestSuccessful:(NSURLResponse*)response;

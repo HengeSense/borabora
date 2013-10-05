@@ -7,23 +7,26 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "STPToken.h"
+#import "PKCard.h"
 
 @interface Card : NSObject {
-    int index;
+    //int index;
+    NSString* stripeCardID;
     NSString* lastFour;
     NSString* type;
-    STPToken* token;
+    PKCard* pkcard;
 }
 
 -(id)initWithLastFour:(NSString*)lastFour Type:(NSString*)type;
 
--(void)setToken:(STPToken*)t;
--(void)setIndex:(int)i;
+-(void)setPKCard:(PKCard*)p;
+//-(void)setIndex:(int)i;
+-(void)setStripeCardID:(NSString*)c;
 
 -(NSString*)getType;
 -(NSString*)getLastFour;
--(int)getIndex;
--(STPToken*)getToken;
+//-(int)getIndex;
+-(PKCard*)getPKCard;
+-(NSString*)getStripeCardID;
 
 @end
