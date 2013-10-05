@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E59074A1800A2BB00E4260D"
+               BlueprintIdentifier = "4E5907851800A3AE00E4260D"
                BuildableName = "purple-merchant.app"
                BlueprintName = "purple-merchant"
                ReferencedContainer = "container:purple-merchant.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "4E5907651800A2BC00E4260D"
+               BlueprintIdentifier = "4E5907A61800A3AF00E4260D"
                BuildableName = "purple-merchantTests.xctest"
                BlueprintName = "purple-merchantTests"
                ReferencedContainer = "container:purple-merchant.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E59074A1800A2BB00E4260D"
+            BlueprintIdentifier = "4E5907851800A3AE00E4260D"
             BuildableName = "purple-merchant.app"
             BlueprintName = "purple-merchant"
             ReferencedContainer = "container:purple-merchant.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E59074A1800A2BB00E4260D"
+            BlueprintIdentifier = "4E5907851800A3AE00E4260D"
             BuildableName = "purple-merchant.app"
             BlueprintName = "purple-merchant"
             ReferencedContainer = "container:purple-merchant.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "4E59074A1800A2BB00E4260D"
+            BlueprintIdentifier = "4E5907851800A3AE00E4260D"
             BuildableName = "purple-merchant.app"
             BlueprintName = "purple-merchant"
             ReferencedContainer = "container:purple-merchant.xcodeproj">
