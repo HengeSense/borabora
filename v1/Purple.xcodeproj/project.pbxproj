@@ -27,6 +27,10 @@
 		4E59073D17FDCB6200E4260D /* NSString+URLEncoding.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59073C17FDCB6200E4260D /* NSString+URLEncoding.m */; };
 		4E59074017FE5F2400E4260D /* Card.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59073F17FE5F2400E4260D /* Card.m */; };
 		4E65BFA017FA80A2006934D4 /* CreateAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E65BF9F17FA8089006934D4 /* CreateAccountViewController.m */; };
+		4E9349B71802431B00809324 /* bg-purple-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9349B61802431B00809324 /* bg-purple-1.png */; };
+		4E9349B91802481800809324 /* button-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9349B81802481800809324 /* button-1.png */; };
+		4E9349BC18024C4400809324 /* p-icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9349BA18024C4400809324 /* p-icon@2x.png */; };
+		4E9349BD18024C4400809324 /* p-icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E9349BB18024C4400809324 /* p-icon.png */; };
 		4E94FE6817EEA1F80082BE7F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6717EEA1F80082BE7F /* Foundation.framework */; };
 		4E94FE6A17EEA1F80082BE7F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6917EEA1F80082BE7F /* CoreGraphics.framework */; };
 		4E94FE6C17EEA1F80082BE7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E94FE6B17EEA1F80082BE7F /* UIKit.framework */; };
@@ -164,6 +168,10 @@
 		4E59073F17FE5F2400E4260D /* Card.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Card.m; sourceTree = "<group>"; };
 		4E65BF9E17FA8089006934D4 /* CreateAccountViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CreateAccountViewController.h; sourceTree = "<group>"; };
 		4E65BF9F17FA8089006934D4 /* CreateAccountViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CreateAccountViewController.m; sourceTree = "<group>"; };
+		4E9349B61802431B00809324 /* bg-purple-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "bg-purple-1.png"; path = "../../../../../../../../Desktop/bg-purple-1.png"; sourceTree = "<group>"; };
+		4E9349B81802481800809324 /* button-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "button-1.png"; sourceTree = "<group>"; };
+		4E9349BA18024C4400809324 /* p-icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p-icon@2x.png"; sourceTree = "<group>"; };
+		4E9349BB18024C4400809324 /* p-icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "p-icon.png"; sourceTree = "<group>"; };
 		4E94FE6417EEA1F80082BE7F /* Purple.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Purple.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E94FE6717EEA1F80082BE7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		4E94FE6917EEA1F80082BE7F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -650,6 +658,8 @@
 		4E94FF3E17EEB9680082BE7F /* img */ = {
 			isa = PBXGroup;
 			children = (
+				4E9349B81802481800809324 /* button-1.png */,
+				4E9349B61802431B00809324 /* bg-purple-1.png */,
 				4E33331D17F621CF00588AB9 /* printer-feed-paper.png */,
 				4EC26B5D17F5EA25007BCF38 /* icon */,
 				4EC26B5A17F5E452007BCF38 /* purple.png */,
@@ -702,6 +712,8 @@
 			children = (
 				4EC26B6217F5EB82007BCF38 /* search-icon.png */,
 				4EC26B6317F5EB82007BCF38 /* search-icon@2x.png */,
+				4E9349BA18024C4400809324 /* p-icon@2x.png */,
+				4E9349BB18024C4400809324 /* p-icon.png */,
 				4EC26B6617F5ECFA007BCF38 /* pay-icon.png */,
 				4EC26B6717F5ECFA007BCF38 /* pay-icon@2x.png */,
 				4EC26B6017F5EA48007BCF38 /* calculator.png */,
@@ -870,6 +882,7 @@
 				4E94FF1217EEA2040082BE7F /* diners.png in Resources */,
 				4E94FF3217EEA2040082BE7F /* PaymentKit.podspec in Resources */,
 				4EC26B6417F5EB82007BCF38 /* search-icon.png in Resources */,
+				4E9349B91802481800809324 /* button-1.png in Resources */,
 				4E94FF1317EEA2040082BE7F /* diners@2x.png in Resources */,
 				4E94FF0D17EEA2040082BE7F /* amex@2x.png in Resources */,
 				4E94FE8317EEA1F80082BE7F /* Images.xcassets in Resources */,
@@ -882,12 +895,15 @@
 				4E94FF1617EEA2040082BE7F /* jcb.png in Resources */,
 				4E94FF2017EEA2040082BE7F /* textfield@2x.png in Resources */,
 				4E94FF1117EEA2040082BE7F /* cvc@2x.png in Resources */,
+				4E9349BC18024C4400809324 /* p-icon@2x.png in Resources */,
 				4E94FF0F17EEA2040082BE7F /* cvc-amex@2x.png in Resources */,
 				4EDA5BE117EF3AFD007A1777 /* zbar-back.png in Resources */,
 				4E94FF1717EEA2040082BE7F /* jcb@2x.png in Resources */,
 				4E94FF1A17EEA2040082BE7F /* placeholder.png in Resources */,
+				4E9349BD18024C4400809324 /* p-icon.png in Resources */,
 				4E94FF1D17EEA2040082BE7F /* visa@2x.png in Resources */,
 				4EC26B6117F5EA48007BCF38 /* calculator.png in Resources */,
+				4E9349B71802431B00809324 /* bg-purple-1.png in Resources */,
 				4EC26B6817F5ECFA007BCF38 /* pay-icon.png in Resources */,
 				4E94FF3317EEA2040082BE7F /* README.md in Resources */,
 				4E94FF1517EEA2040082BE7F /* discover@2x.png in Resources */,

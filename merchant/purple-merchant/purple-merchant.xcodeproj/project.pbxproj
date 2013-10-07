@@ -14,13 +14,23 @@
 		4E5907961800A3AE00E4260D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907951800A3AE00E4260D /* main.m */; };
 		4E59079A1800A3AE00E4260D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907991800A3AE00E4260D /* AppDelegate.m */; };
 		4E59079D1800A3AE00E4260D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E59079B1800A3AE00E4260D /* Main.storyboard */; };
-		4E5907A01800A3AE00E4260D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E59079F1800A3AE00E4260D /* ViewController.m */; };
 		4E5907A21800A3AF00E4260D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E5907A11800A3AF00E4260D /* Images.xcassets */; };
 		4E5907A91800A3AF00E4260D /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5907A81800A3AF00E4260D /* XCTest.framework */; };
 		4E5907AA1800A3AF00E4260D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5907891800A3AE00E4260D /* Foundation.framework */; };
 		4E5907AB1800A3AF00E4260D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E59078D1800A3AE00E4260D /* UIKit.framework */; };
 		4E5907B31800A3AF00E4260D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E5907B11800A3AF00E4260D /* InfoPlist.strings */; };
 		4E5907B51800A3AF00E4260D /* purple_merchantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907B41800A3AF00E4260D /* purple_merchantTests.m */; };
+		4E5907C11801468500E4260D /* InventoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907C01801468500E4260D /* InventoryViewController.m */; };
+		4E5907C5180146FE00E4260D /* InventoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907C4180146FE00E4260D /* InventoryCell.m */; };
+		4E5907CA18014A2D00E4260D /* InventoryController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907C918014A2D00E4260D /* InventoryController.m */; };
+		4E5907CD18014A6600E4260D /* InventoryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907CC18014A6600E4260D /* InventoryItem.m */; };
+		4E5907D01801508B00E4260D /* InventorySearchHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907CF1801508B00E4260D /* InventorySearchHeader.m */; };
+		4E5907D41801524700E4260D /* StickyLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907D31801524700E4260D /* StickyLayout.m */; };
+		4E5907D71801AF0300E4260D /* TabController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907D61801AF0300E4260D /* TabController.m */; };
+		4E5907DA1801B1A200E4260D /* TabViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907D91801B1A200E4260D /* TabViewController.m */; };
+		4E5907DD18020E2D00E4260D /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5907DC18020E2D00E4260D /* MasterViewController.m */; };
+		4E59081F180215FC00E4260D /* libQREncoder.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E59081C180215C800E4260D /* libQREncoder.a */; };
+		4E5908241802168D00E4260D /* ScanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5908231802168D00E4260D /* ScanViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +40,27 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4E5907851800A3AE00E4260D;
 			remoteInfo = "purple-merchant";
+		};
+		4E59081B180215C800E4260D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E590816180215C800E4260D /* QREncoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = QREncoder;
+		};
+		4E59081D180215C800E4260D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E590816180215C800E4260D /* QREncoder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EB7DA3AE10A4F5D90071984A;
+			remoteInfo = QREncoderTest;
+		};
+		4E5908201802161800E4260D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E590816180215C800E4260D /* QREncoder.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = QREncoder;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -45,14 +76,33 @@
 		4E5907981800A3AE00E4260D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E5907991800A3AE00E4260D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E59079C1800A3AE00E4260D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		4E59079E1800A3AE00E4260D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		4E59079F1800A3AE00E4260D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		4E5907A11800A3AF00E4260D /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4E5907A71800A3AF00E4260D /* purple-merchantTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "purple-merchantTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E5907A81800A3AF00E4260D /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		4E5907B01800A3AF00E4260D /* purple-merchantTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "purple-merchantTests-Info.plist"; sourceTree = "<group>"; };
 		4E5907B21800A3AF00E4260D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		4E5907B41800A3AF00E4260D /* purple_merchantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = purple_merchantTests.m; sourceTree = "<group>"; };
+		4E5907BF1801468500E4260D /* InventoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryViewController.h; sourceTree = "<group>"; };
+		4E5907C01801468500E4260D /* InventoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryViewController.m; sourceTree = "<group>"; };
+		4E5907C3180146FE00E4260D /* InventoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryCell.h; sourceTree = "<group>"; };
+		4E5907C4180146FE00E4260D /* InventoryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryCell.m; sourceTree = "<group>"; };
+		4E5907C818014A2D00E4260D /* InventoryController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryController.h; sourceTree = "<group>"; };
+		4E5907C918014A2D00E4260D /* InventoryController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryController.m; sourceTree = "<group>"; };
+		4E5907CB18014A6600E4260D /* InventoryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventoryItem.h; sourceTree = "<group>"; };
+		4E5907CC18014A6600E4260D /* InventoryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventoryItem.m; sourceTree = "<group>"; };
+		4E5907CE1801508B00E4260D /* InventorySearchHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InventorySearchHeader.h; sourceTree = "<group>"; };
+		4E5907CF1801508B00E4260D /* InventorySearchHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InventorySearchHeader.m; sourceTree = "<group>"; };
+		4E5907D21801524700E4260D /* StickyLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StickyLayout.h; sourceTree = "<group>"; };
+		4E5907D31801524700E4260D /* StickyLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StickyLayout.m; sourceTree = "<group>"; };
+		4E5907D51801AF0300E4260D /* TabController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabController.h; sourceTree = "<group>"; };
+		4E5907D61801AF0300E4260D /* TabController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabController.m; sourceTree = "<group>"; };
+		4E5907D81801B1A200E4260D /* TabViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TabViewController.h; sourceTree = "<group>"; };
+		4E5907D91801B1A200E4260D /* TabViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TabViewController.m; sourceTree = "<group>"; };
+		4E5907DB18020E2D00E4260D /* MasterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		4E5907DC18020E2D00E4260D /* MasterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		4E590816180215C800E4260D /* QREncoder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = QREncoder.xcodeproj; path = lib/encoder/QREncoder.xcodeproj; sourceTree = "<group>"; };
+		4E5908221802168D00E4260D /* ScanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScanViewController.h; sourceTree = "<group>"; };
+		4E5908231802168D00E4260D /* ScanViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScanViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +110,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E59081F180215FC00E4260D /* libQREncoder.a in Frameworks */,
 				4E59078C1800A3AE00E4260D /* CoreGraphics.framework in Frameworks */,
 				4E59078E1800A3AE00E4260D /* UIKit.framework in Frameworks */,
 				4E59078A1800A3AE00E4260D /* Foundation.framework in Frameworks */,
@@ -82,6 +133,7 @@
 		4E59077D1800A3AE00E4260D = {
 			isa = PBXGroup;
 			children = (
+				4E590816180215C800E4260D /* QREncoder.xcodeproj */,
 				4E59078F1800A3AE00E4260D /* purple-merchant */,
 				4E5907AE1800A3AF00E4260D /* purple-merchantTests */,
 				4E5907881800A3AE00E4260D /* Frameworks */,
@@ -112,11 +164,12 @@
 		4E59078F1800A3AE00E4260D /* purple-merchant */ = {
 			isa = PBXGroup;
 			children = (
+				4E5907C718014A1A00E4260D /* controller */,
+				4E5907C618014A1400E4260D /* model */,
+				4E5907BE1801465700E4260D /* view */,
 				4E5907981800A3AE00E4260D /* AppDelegate.h */,
 				4E5907991800A3AE00E4260D /* AppDelegate.m */,
 				4E59079B1800A3AE00E4260D /* Main.storyboard */,
-				4E59079E1800A3AE00E4260D /* ViewController.h */,
-				4E59079F1800A3AE00E4260D /* ViewController.m */,
 				4E5907A11800A3AF00E4260D /* Images.xcassets */,
 				4E5907901800A3AE00E4260D /* Supporting Files */,
 			);
@@ -152,6 +205,72 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		4E5907BE1801465700E4260D /* view */ = {
+			isa = PBXGroup;
+			children = (
+				4E5907C2180146DA00E4260D /* controller */,
+				4E5907C3180146FE00E4260D /* InventoryCell.h */,
+				4E5907C4180146FE00E4260D /* InventoryCell.m */,
+				4E5907CE1801508B00E4260D /* InventorySearchHeader.h */,
+				4E5907CF1801508B00E4260D /* InventorySearchHeader.m */,
+			);
+			name = view;
+			sourceTree = "<group>";
+		};
+		4E5907C2180146DA00E4260D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E5907D11801522F00E4260D /* helper */,
+				4E5907DB18020E2D00E4260D /* MasterViewController.h */,
+				4E5907DC18020E2D00E4260D /* MasterViewController.m */,
+				4E5907BF1801468500E4260D /* InventoryViewController.h */,
+				4E5907C01801468500E4260D /* InventoryViewController.m */,
+				4E5907D81801B1A200E4260D /* TabViewController.h */,
+				4E5907D91801B1A200E4260D /* TabViewController.m */,
+				4E5908221802168D00E4260D /* ScanViewController.h */,
+				4E5908231802168D00E4260D /* ScanViewController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		4E5907C618014A1400E4260D /* model */ = {
+			isa = PBXGroup;
+			children = (
+				4E5907CB18014A6600E4260D /* InventoryItem.h */,
+				4E5907CC18014A6600E4260D /* InventoryItem.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
+		4E5907C718014A1A00E4260D /* controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E5907C818014A2D00E4260D /* InventoryController.h */,
+				4E5907C918014A2D00E4260D /* InventoryController.m */,
+				4E5907D51801AF0300E4260D /* TabController.h */,
+				4E5907D61801AF0300E4260D /* TabController.m */,
+			);
+			name = controller;
+			sourceTree = "<group>";
+		};
+		4E5907D11801522F00E4260D /* helper */ = {
+			isa = PBXGroup;
+			children = (
+				4E5907D21801524700E4260D /* StickyLayout.h */,
+				4E5907D31801524700E4260D /* StickyLayout.m */,
+			);
+			name = helper;
+			sourceTree = "<group>";
+		};
+		4E590817180215C800E4260D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E59081C180215C800E4260D /* libQREncoder.a */,
+				4E59081E180215C800E4260D /* QREncoderTest.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +285,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				4E5908211802161800E4260D /* PBXTargetDependency */,
 			);
 			name = "purple-merchant";
 			productName = "purple-merchant";
@@ -215,6 +335,12 @@
 			mainGroup = 4E59077D1800A3AE00E4260D;
 			productRefGroup = 4E5907871800A3AE00E4260D /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 4E590817180215C800E4260D /* Products */;
+					ProjectRef = 4E590816180215C800E4260D /* QREncoder.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				4E5907851800A3AE00E4260D /* purple-merchant */,
@@ -222,6 +348,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		4E59081C180215C800E4260D /* libQREncoder.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libQREncoder.a;
+			remoteRef = 4E59081B180215C800E4260D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4E59081E180215C800E4260D /* QREncoderTest.octest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = QREncoderTest.octest;
+			remoteRef = 4E59081D180215C800E4260D /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		4E5907841800A3AE00E4260D /* Resources */ = {
@@ -249,9 +392,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E5907A01800A3AE00E4260D /* ViewController.m in Sources */,
+				4E5907DA1801B1A200E4260D /* TabViewController.m in Sources */,
+				4E5907D41801524700E4260D /* StickyLayout.m in Sources */,
+				4E5907CA18014A2D00E4260D /* InventoryController.m in Sources */,
+				4E5907DD18020E2D00E4260D /* MasterViewController.m in Sources */,
+				4E5907C11801468500E4260D /* InventoryViewController.m in Sources */,
 				4E59079A1800A3AE00E4260D /* AppDelegate.m in Sources */,
 				4E5907961800A3AE00E4260D /* main.m in Sources */,
+				4E5908241802168D00E4260D /* ScanViewController.m in Sources */,
+				4E5907CD18014A6600E4260D /* InventoryItem.m in Sources */,
+				4E5907D71801AF0300E4260D /* TabController.m in Sources */,
+				4E5907C5180146FE00E4260D /* InventoryCell.m in Sources */,
+				4E5907D01801508B00E4260D /* InventorySearchHeader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +422,11 @@
 			isa = PBXTargetDependency;
 			target = 4E5907851800A3AE00E4260D /* purple-merchant */;
 			targetProxy = 4E5907AC1800A3AF00E4260D /* PBXContainerItemProxy */;
+		};
+		4E5908211802161800E4260D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QREncoder;
+			targetProxy = 4E5908201802161800E4260D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -382,6 +539,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "purple-merchant/purple-merchant-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/mfiume/Documents/Marc/School/Projects/XCode/borabora/merchant/purple-merchant/lib/encoder/Classes",
+				);
 				INFOPLIST_FILE = "purple-merchant/purple-merchant-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -395,6 +557,11 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "purple-merchant/purple-merchant-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/mfiume/Documents/Marc/School/Projects/XCode/borabora/merchant/purple-merchant/lib/encoder/Classes",
+				);
 				INFOPLIST_FILE = "purple-merchant/purple-merchant-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
@@ -462,6 +629,7 @@
 				4E5907BA1800A3AF00E4260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4E5907BB1800A3AF00E4260D /* Build configuration list for PBXNativeTarget "purple-merchantTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +638,7 @@
 				4E5907BD1800A3AF00E4260D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

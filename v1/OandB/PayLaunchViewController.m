@@ -70,7 +70,6 @@
         break;
     
     // showing the result on textview
-    NSLog(@"%@",symbol.data);
     
     //[labelAmount setText:symbol.data];
     
@@ -79,7 +78,16 @@
     // dismiss the controller
     [reader dismissViewControllerAnimated:NO completion:nil];
     
+    NSString* data = symbol.data;
+    NSArray *components = [data componentsSeparatedByString:@"="];
+    double amount = [[components lastObject] doubleValue];
+    
+    Bill* bill = [[Bill alloc] initWithMerchantID:1 Amount:amount];
+    [Checkout startNewCheckout:bill];
+
     NSLog(@"Trying to push pay nav controller");
+    NSLog(@"Read from scanner %@",symbol.data);
+    
     UIViewController *controller = [self.storyboard instantiateViewControllerWithIdentifier:@"PayNavigationController"];
     
     [self.tabBarController presentViewController:controller animated:YES completion:nil];

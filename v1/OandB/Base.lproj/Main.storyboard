@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93725496529999996" green="0.93725496529999996" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" image="search-icon.png" id="u1e-5L-l1D"/>
+                    <tabBarItem key="tabBarItem" systemItem="search" id="u1e-5L-l1D"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qh2-T1-AhA" sceneMemberID="firstResponder"/>
             </objects>
@@ -715,11 +715,15 @@ Oakville, ON L6H 3H6</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bg-purple-1.png" translatesAutoresizingMaskIntoConstraints="NO" id="Pf5-an-TVV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K6S-rC-Xvx">
                                 <rect key="frame" x="86" y="186" width="148" height="148"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <state key="normal" backgroundImage="purple-2.png">
+                                <state key="normal" backgroundImage="button-1.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -749,7 +753,7 @@ Oakville, ON L6H 3H6</string>
                         <color key="backgroundColor" red="0.93725496529999996" green="0.93725496529999996" blue="0.93725496529999996" alpha="1" colorSpace="deviceRGB"/>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <tabBarItem key="tabBarItem" title="Pay" image="pay-icon.png" id="zoK-hd-Uep"/>
+                    <tabBarItem key="tabBarItem" title="Pay" image="p-icon.png" id="zoK-hd-Uep"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wjf-EW-sUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -845,10 +849,10 @@ Oakville, ON L6H 3H6</string>
         </scene>
     </scenes>
     <resources>
+        <image name="bg-purple-1.png" width="640" height="1136"/>
+        <image name="button-1.png" width="211" height="211"/>
         <image name="ob-logo.png" width="300" height="300"/>
-        <image name="pay-icon.png" width="30" height="30"/>
-        <image name="purple-2.png" width="265" height="265"/>
-        <image name="search-icon.png" width="30" height="29"/>
+        <image name="p-icon.png" width="30" height="30"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

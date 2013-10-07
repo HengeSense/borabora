@@ -534,6 +534,7 @@
 				4EDA5C7817EF42D5007A1777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		4EDA5C7917EF42D5007A1777 /* Build configuration list for PBXNativeTarget "Bora-MerchantTests" */ = {
 			isa = XCConfigurationList;
@@ -542,6 +543,7 @@
 				4EDA5C7B17EF42D5007A1777 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -19,7 +19,8 @@
 }
 
 +(UIColor*) getPrimaryBackgroundColor {
-    return [UIColor colorWithRed:201/255.0f green:32/255.0f blue:207/255.0f alpha:1.0f];
+    //return [UIColor colorWithRed:201/255.0f green:32/255.0f blue:207/255.0f alpha:1.0f];
+    return [UIColor colorWithRed:132/255.0f green:47/255.0f blue:220/255.0f alpha:1.0f];
 }
 
 +(UIColor*) getSecondaryBackgroundColor {
